@@ -11,6 +11,6 @@
       <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="Lab1.MainPage" />
+    <RootType FullName="Lab1.Presentation.Views.MainPage" />
   </Roots.RootTypes>
 </Roots>

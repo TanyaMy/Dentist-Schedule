@@ -133,12 +133,12 @@ namespace Lab1.Lab1_XamlTypeInfo
         private void InitTypeTables()
         {
             _typeNameTable = new string[3];
-            _typeNameTable[0] = "Lab1.MainPage";
+            _typeNameTable[0] = "Lab1.Presentation.Views.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
 
             _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::Lab1.MainPage);
+            _typeTable[0] = typeof(global::Lab1.Presentation.Views.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
@@ -175,7 +175,7 @@ namespace Lab1.Lab1_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::Lab1.MainPage(); }
+        private object Activate_0_MainPage() { return new global::Lab1.Presentation.Views.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -187,7 +187,7 @@ namespace Lab1.Lab1_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Lab1.MainPage
+            case 0:   //  Lab1.Presentation.Views.MainPage
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
                 userType.SetIsLocalType();

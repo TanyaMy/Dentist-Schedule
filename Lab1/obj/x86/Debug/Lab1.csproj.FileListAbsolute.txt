@@ -406,8 +406,8 @@ C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\MultipleQualifiers
 C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\resources.en-us.resfiles
 C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\ProjectArchitectures.txt
-C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\bin\x86\Debug\MainPage.xbf
-C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\MainPage.g.i.cs
-C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\MainPage.g.cs
-C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\MainPage.xaml
-C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\MainPage.xbf
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\bin\x86\Debug\Presentation\Views\MainPage.xbf
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\MainPage.g.i.cs
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\MainPage.g.cs
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\MainPage.xaml
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\MainPage.xbf
