@@ -38,23 +38,23 @@
         </Grid.RowDefinitions>
         <Rectangle Grid.Row="0" Fill="DarkBlue" Grid.ColumnSpan="4" />
 
-        <Rectangle Grid.Row="2" Fill="#FFFFCFCF" Grid.ColumnSpan="4"/>
+        <Rectangle Grid.Row="2" Fill="#FFD6FFCF" Grid.ColumnSpan="4"/>
 
         <Grid x:Name="text" Grid.Row="0" Grid.ColumnSpan="4">
             <TextBlock x:Name="textBlock" VerticalAlignment="Center" Width="Auto" HorizontalAlignment="Center" Text="Стоматология 'Белые зубки'" FontSize="40" FontWeight="Bold" Foreground="PeachPuff" FontStyle="Italic"/>
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="0">
-            <Button  x:Name="mainBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Главная" Background="#FFF97366" FontStyle="Italic" FontSize="30" FontWeight="Bold" Click="mainBtn_Click" />
+            <Button  x:Name="mainBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Главная" Background="#FF9B66F9" FontStyle="Italic" FontSize="30" FontWeight="Bold" Click="mainBtn_Click" />
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
-            <Button x:Name="regBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Запись на приём" Background="#FFFDB763" FontStyle="Italic" FontSize="30" FontWeight="Bold" Click="regBtn_Click" />
+            <Button x:Name="regBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Запись на приём" Background="#FF7163FD" FontStyle="Italic" FontSize="30" FontWeight="Bold" Click="regBtn_Click" />
         </Grid>
         <Grid Grid.Row="1" Grid.Column="2">
-            <Button x:Name="contactBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="О нас" Background="#FFFDFD7C" FontStyle="Italic" FontSize="30" FontWeight="Bold" Click="contactBtn_Click" />
+            <Button x:Name="contactBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="О нас" Background="#FF9B66F9" FontStyle="Italic" FontSize="30" FontWeight="Bold" Click="contactBtn_Click" />
         </Grid>
         <Grid Grid.Row="1" Grid.Column="3">
-            <Button x:Name="factsBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Интересные факты" Background="#FFA6FF9D" FontStyle="Italic" FontSize="30" FontWeight="Bold" Click="factsBtn_Click" />
+            <Button x:Name="factsBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Интересные факты" Background="#FF7163FD" FontStyle="Italic" FontSize="30" FontWeight="Bold" Click="factsBtn_Click" />
         </Grid>
         <Image x:Name="image" Source="/Images/teeth.png" HorizontalAlignment="Stretch" Height="463" Width="Auto" Grid.Row="2" VerticalAlignment="Top" Grid.Column="2" Margin="48,58,10,0" Grid.ColumnSpan="2"/>
         <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,0,269,0" >

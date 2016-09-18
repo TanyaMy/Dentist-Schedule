@@ -16,38 +16,38 @@
             <ColumnDefinition Width="0.6*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="0.12*"/>
+            <RowDefinition Height="0.08*"/>
             <RowDefinition Height="0.15*"/>
-            <RowDefinition Height="0.1*"/>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.13*"/>
+            <RowDefinition Height="0.13*"/>
+            <RowDefinition Height="0.13*"/>
+            <RowDefinition Height="0.13*"/>
+            <RowDefinition Height="0.13*"/>
         </Grid.RowDefinitions>
         <Rectangle Grid.Row="0" Fill="DarkBlue" Grid.ColumnSpan="4" />
-        <Rectangle Grid.Row="2" Fill="#FFFFE5C7" Grid.ColumnSpan="4"/>
-        <Rectangle Grid.Row="3" Fill="#FFFFE5C7" Grid.ColumnSpan="4"/>
-        <Rectangle Grid.Row="4" Fill="#FFFFE5C7" Grid.ColumnSpan="4"/>
-        <Rectangle Grid.Row="5" Fill="#FFFFE5C7" Grid.ColumnSpan="4"/>
-        <Rectangle Grid.Row="6" Fill="#FFFFE5C7" Grid.ColumnSpan="4"/>
-        <Rectangle Grid.Row="7" Fill="#FFFFE5C7" Grid.ColumnSpan="4"/>
+        <Rectangle Grid.Row="2" Fill="#FF84FFF4" Grid.ColumnSpan="4"/>
+        <Rectangle Grid.Row="3" Fill="#FF63FD94" Grid.ColumnSpan="4"/>
+        <Rectangle Grid.Row="4" Fill="#FF63FD94" Grid.ColumnSpan="4"/>
+        <Rectangle Grid.Row="5" Fill="#FF63FD94" Grid.ColumnSpan="4"/>
+        <Rectangle Grid.Row="6" Fill="#FF63FD94" Grid.ColumnSpan="4"/>
+        <Rectangle Grid.Row="7" Fill="#FF63FD94" Grid.ColumnSpan="4"/>
 
         <Grid x:ConnectionId='1' x:Name="text" Grid.Row="0" Grid.ColumnSpan="4">
             <TextBlock x:ConnectionId='12' x:Name="textBlock" VerticalAlignment="Center" Width="Auto" HorizontalAlignment="Center" Text="Стоматология 'Белые зубки'" FontSize="40" FontWeight="Bold" Foreground="PeachPuff" FontStyle="Italic"/>
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="0">
-            <Button x:ConnectionId='11'  x:Name="mainBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Главная" Background="#FFF97366" FontStyle="Italic" FontSize="30" FontWeight="Bold"                       />
+            <Button x:ConnectionId='11'  x:Name="mainBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Главная" Background="#FF9B66F9" FontStyle="Italic" FontSize="30" FontWeight="Bold"                       />
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
-            <Button x:ConnectionId='10' x:Name="regBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Запись на приём" Background="#FFFDB763" FontStyle="Italic" FontSize="30" FontWeight="Bold"                      />
+            <Button x:ConnectionId='10' x:Name="regBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Запись на приём" Background="#FF7163FD" FontStyle="Italic" FontSize="30" FontWeight="Bold"                      />
         </Grid>
         <Grid Grid.Row="1" Grid.Column="2">
-            <Button x:ConnectionId='9' x:Name="contactBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="О нас" Background="#FFFDFD7C" FontStyle="Italic" FontSize="30" FontWeight="Bold"                          />
+            <Button x:ConnectionId='9' x:Name="contactBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="О нас" Background="#FF9B66F9" FontStyle="Italic" FontSize="30" FontWeight="Bold"                          />
         </Grid>
         <Grid Grid.Row="1" Grid.Column="3">
-            <Button x:ConnectionId='8' x:Name="factsBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Интересные факты" Background="#FFA6FF9D" FontStyle="Italic" FontSize="30" FontWeight="Bold"                        />
+            <Button x:ConnectionId='8' x:Name="factsBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Интересные факты" Background="#FF7163FD" FontStyle="Italic" FontSize="30" FontWeight="Bold"                        />
         </Grid>
         
         
@@ -58,7 +58,7 @@
             <Button x:ConnectionId='6' x:Name="consBtn" Content="Консультация" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Background="LightBlue" FontSize="35"                       FontFamily="Showcard Gothic" FontWeight="Bold"/>
         </Grid>
         <Grid Grid.Row="4" Grid.ColumnSpan="4">
-            <Button x:ConnectionId='5' x:Name="surgerybtn" Content="Хирургия" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  Background="#FFB9F7F7" FontSize="35" FontFamily="Showcard Gothic" FontWeight="Bold"/>
+            <Button x:ConnectionId='5' x:Name="surgerybtn" Content="Хирургия" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  Background="#FFB9F7F7" FontSize="35" FontFamily="Showcard Gothic" FontWeight="Bold"                         />
         </Grid>
         <Grid Grid.Row="5" Grid.ColumnSpan="4">
             <Button x:ConnectionId='4' x:Name="whiteBtn" Content="Отбеливание" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Background="LightBlue" FontSize="35"  FontFamily="Showcard Gothic" FontWeight="Bold"/>

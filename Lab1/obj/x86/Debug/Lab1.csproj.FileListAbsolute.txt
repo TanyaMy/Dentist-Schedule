@@ -212,3 +212,8 @@ D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\La
 D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\Lab1\Lab1\obj\x86\Debug\Views\Menu\FactsPage.xbf
 D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\Lab1\Lab1\obj\x86\Debug\Views\Menu\MainPage.xbf
 D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\Lab1\Lab1\obj\x86\Debug\Views\Menu\RegistrationPage.xbf
+D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\Lab1\Lab1\bin\x86\Debug\Views\Registration\SurgeryPage.xbf
+D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\Lab1\Lab1\obj\x86\Debug\Views\Registration\SurgeryPage.g.i.cs
+D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\Lab1\Lab1\obj\x86\Debug\Views\Registration\SurgeryPage.g.cs
+D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\Lab1\Lab1\obj\x86\Debug\Views\Registration\SurgeryPage.xaml
+D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\Lab1\Lab1\obj\x86\Debug\Views\Registration\SurgeryPage.xbf

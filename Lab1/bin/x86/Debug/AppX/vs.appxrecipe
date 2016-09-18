@@ -28,13 +28,13 @@
     <AppXManifest Include="D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction%28ЛМВз%29\Lab1\Lab1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-09-17T16:23:04.487</Modified>
+      <Modified>2016-09-18T17:14:12.757</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction%28ЛМВз%29\Lab1\Lab1\bin\x86\Debug\Lab1.exe">
       <PackagePath>entrypoint\Lab1.exe</PackagePath>
-      <Modified>2016-09-17T16:23:03.435</Modified>
+      <Modified>2016-09-18T17:14:11.109</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Tetiana\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -504,7 +504,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction%28ЛМВз%29\Lab1\Lab1\bin\x86\Debug\Lab1.xr.xml">
       <PackagePath>Lab1.xr.xml</PackagePath>
-      <Modified>2016-09-17T16:21:45.037</Modified>
+      <Modified>2016-09-18T16:57:08.376</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -512,11 +512,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction%28ЛМВз%29\Lab1\Lab1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-09-17T16:23:04.208</Modified>
+      <Modified>2016-09-18T17:14:12.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction%28ЛМВз%29\Lab1\Lab1\bin\x86\Debug\Core\Lab1.exe">
       <PackagePath>Lab1.exe</PackagePath>
-      <Modified>2016-09-17T16:23:04.482</Modified>
+      <Modified>2016-09-18T17:14:12.750</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

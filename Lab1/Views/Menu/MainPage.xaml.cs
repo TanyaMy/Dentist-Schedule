@@ -24,7 +24,7 @@ namespace Lab1
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();           
         }       
 
         private void mainBtn_Click(object sender, RoutedEventArgs e)
