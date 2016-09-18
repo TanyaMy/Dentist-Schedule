@@ -411,3 +411,11 @@ C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views
 C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\MainPage.g.cs
 C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\MainPage.xaml
 C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\MainPage.xbf
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\bin\x86\Debug\Presentation\Resources\Colors.xbf
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Resources\Colors.xaml
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Resources\Colors.xbf
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\bin\x86\Debug\Presentation\Views\RolesPage.xbf
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\RolesPage.g.i.cs
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\RolesPage.g.cs
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\RolesPage.xaml
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\obj\x86\Debug\Presentation\Views\RolesPage.xbf
