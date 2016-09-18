@@ -132,25 +132,15 @@ namespace Lab1.Lab1_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[8];
-            _typeNameTable[0] = "Lab1.ContactPage";
+            _typeNameTable = new string[3];
+            _typeNameTable[0] = "Lab1.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Lab1.ConsultPage";
-            _typeNameTable[4] = "Lab1.FactsPage";
-            _typeNameTable[5] = "Lab1.MainPage";
-            _typeNameTable[6] = "Lab1.RegistrationPage";
-            _typeNameTable[7] = "Lab1.Views.Registration.SurgeryPage";
 
-            _typeTable = new global::System.Type[8];
-            _typeTable[0] = typeof(global::Lab1.ContactPage);
+            _typeTable = new global::System.Type[3];
+            _typeTable[0] = typeof(global::Lab1.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Lab1.ConsultPage);
-            _typeTable[4] = typeof(global::Lab1.FactsPage);
-            _typeTable[5] = typeof(global::Lab1.MainPage);
-            _typeTable[6] = typeof(global::Lab1.RegistrationPage);
-            _typeTable[7] = typeof(global::Lab1.Views.Registration.SurgeryPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -185,12 +175,7 @@ namespace Lab1.Lab1_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_ContactPage() { return new global::Lab1.ContactPage(); }
-        private object Activate_3_ConsultPage() { return new global::Lab1.ConsultPage(); }
-        private object Activate_4_FactsPage() { return new global::Lab1.FactsPage(); }
-        private object Activate_5_MainPage() { return new global::Lab1.MainPage(); }
-        private object Activate_6_RegistrationPage() { return new global::Lab1.RegistrationPage(); }
-        private object Activate_7_SurgeryPage() { return new global::Lab1.Views.Registration.SurgeryPage(); }
+        private object Activate_0_MainPage() { return new global::Lab1.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -202,9 +187,9 @@ namespace Lab1.Lab1_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Lab1.ContactPage
+            case 0:   //  Lab1.MainPage
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_ContactPage;
+                userType.Activator = Activate_0_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -215,41 +200,6 @@ namespace Lab1.Lab1_XamlTypeInfo
 
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Lab1.Lab1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  Lab1.ConsultPage
-                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_ConsultPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 4:   //  Lab1.FactsPage
-                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_FactsPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 5:   //  Lab1.MainPage
-                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_MainPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 6:   //  Lab1.RegistrationPage
-                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_RegistrationPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 7:   //  Lab1.Views.Registration.SurgeryPage
-                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_SurgeryPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
                 break;
             }
             return xamlType;

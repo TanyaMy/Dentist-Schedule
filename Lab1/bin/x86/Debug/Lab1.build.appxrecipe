@@ -334,14 +334,14 @@
     <AppxPackagedFile Include="C:\Users\borys\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Images\brush.png">
-      <PackagePath>Images\brush.png</PackagePath>
+    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\Images\brush.png">
+      <PackagePath>Assets\Images\brush.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Images\doktor.png">
-      <PackagePath>Images\doktor.png</PackagePath>
+    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\Images\doktor.png">
+      <PackagePath>Assets\Images\doktor.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Images\teeth.png">
-      <PackagePath>Images\teeth.png</PackagePath>
+    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\Images\teeth.png">
+      <PackagePath>Assets\Images\teeth.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -370,8 +370,8 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Images\factsback.jpg">
-      <PackagePath>Images\factsback.jpg</PackagePath>
+    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\Images\factsback.jpg">
+      <PackagePath>Assets\Images\factsback.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>

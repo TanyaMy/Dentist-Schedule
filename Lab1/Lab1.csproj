@@ -92,28 +92,13 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\Menu\ContactPage.xaml.cs">
-      <DependentUpon>ContactPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Registration\ConsultPage.xaml.cs">
-      <DependentUpon>ConsultPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Menu\FactsPage.xaml.cs">
-      <DependentUpon>FactsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Menu\MainPage.xaml.cs">
+    <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Menu\RegistrationPage.xaml.cs">
-      <DependentUpon>RegistrationPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Registration\SurgeryPage.xaml.cs">
-      <DependentUpon>SurgeryPage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -122,10 +107,10 @@
     <None Include="Lab1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\brush.png" />
-    <Content Include="Images\doktor.png" />
-    <Content Include="Images\factsback.jpg" />
-    <Content Include="Images\teeth.png" />
+    <Content Include="Assets\Images\brush.png" />
+    <Content Include="Assets\Images\doktor.png" />
+    <Content Include="Assets\Images\factsback.jpg" />
+    <Content Include="Assets\Images\teeth.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -140,27 +125,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\Menu\ContactPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Registration\ConsultPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Menu\FactsPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Menu\MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\Menu\RegistrationPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Registration\SurgeryPage.xaml">
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

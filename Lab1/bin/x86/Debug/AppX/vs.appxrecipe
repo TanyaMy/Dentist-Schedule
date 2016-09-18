@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-09-18T18:05:32.335</Modified>
+      <Modified>2016-09-18T18:18:50.455</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\bin\x86\Debug\Lab1.exe">
       <PackagePath>entrypoint\Lab1.exe</PackagePath>
-      <Modified>2016-09-18T18:05:31.674</Modified>
+      <Modified>2016-09-18T18:18:49.773</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\borys\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -448,16 +448,16 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T20:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Images\brush.png">
-      <PackagePath>Images\brush.png</PackagePath>
+    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\Images\brush.png">
+      <PackagePath>Assets\Images\brush.png</PackagePath>
       <Modified>2016-09-17T17:32:39.752</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Images\doktor.png">
-      <PackagePath>Images\doktor.png</PackagePath>
+    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\Images\doktor.png">
+      <PackagePath>Assets\Images\doktor.png</PackagePath>
       <Modified>2016-09-17T17:32:39.768</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Images\teeth.png">
-      <PackagePath>Images\teeth.png</PackagePath>
+    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\Images\teeth.png">
+      <PackagePath>Assets\Images\teeth.png</PackagePath>
       <Modified>2016-09-17T17:32:39.768</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\LockScreenLogo.scale-200.png">
@@ -494,8 +494,8 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2016-09-17T17:32:35.550</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Images\factsback.jpg">
-      <PackagePath>Images\factsback.jpg</PackagePath>
+    <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Assets\Images\factsback.jpg">
+      <PackagePath>Assets\Images\factsback.jpg</PackagePath>
       <Modified>2016-09-17T17:32:39.768</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Properties\Default.rd.xml">
@@ -504,7 +504,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\bin\x86\Debug\Lab1.xr.xml">
       <PackagePath>Lab1.xr.xml</PackagePath>
-      <Modified>2016-09-18T17:55:46.667</Modified>
+      <Modified>2016-09-18T18:18:49.564</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -513,11 +513,11 @@
     <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-09-18T18:05:32.153</Modified>
+      <Modified>2016-09-18T18:18:50.237</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\bin\x86\Debug\Core\Lab1.exe">
       <PackagePath>Lab1.exe</PackagePath>
-      <Modified>2016-09-18T18:05:32.331</Modified>
+      <Modified>2016-09-18T18:18:50.450</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
