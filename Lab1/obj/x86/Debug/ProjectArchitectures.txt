@@ -1,1 +1,1 @@
-D:\ХНУРЭ\2 Курс\1семестр\Computer-human interaction(ЛМВз)\Lab1\Lab1\Lab1.csproj;x86
+C:\Work\NURE\ComputerHumanInteraction\Lab1\Lab1\Lab1.csproj;x86

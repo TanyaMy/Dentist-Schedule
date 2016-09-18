@@ -37,9 +37,7 @@ namespace Lab1.Views.Registration
             confirmBox.Hide();
             Frame.Navigate(typeof(RegistrationPage));
         }
-
        
-
         private bool notEmptyFields()
         {
             if (nameTB.Text != null && surnameTB.Text != null && addressTB != null
