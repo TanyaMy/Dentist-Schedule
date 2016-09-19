@@ -23,59 +23,49 @@
                 <Button  x:Name="ConsultationBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
-                     Margin="5, 5, 5, 5"
+                     Margin="5"
                      Content="Консультация"
                      Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
                      FontWeight="Bold"
-                     Click="ConsultationBtn_Click"/>
-            
+                     Click="ConsultationBtn_Click"/>            
                 <Button  x:Name="SurgeryBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
-                     Margin="5, 5, 5, 5"
+                     Margin="5"
                      Content="Хирургия"
                      Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
-                     FontWeight="Bold"/>
-            
+                     FontWeight="Bold"/>            
                 <Button  x:Name="CosmetologyBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
-                     Margin="5, 5, 5, 5"
+                     Margin="5"
                      Content="Косметология"
                      Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
-                     FontWeight="Bold"/>
-           
+                     FontWeight="Bold"/>           
                 <Button  x:Name="FillingBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
-                     Margin="5, 5, 5, 5"
+                     Margin="5"
                      Content="Пломбирование"
                      Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
-                     FontWeight="Bold"/>
-            
+                     FontWeight="Bold"/>            
                 <Button  x:Name="ChidrenBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
-                     Margin="5, 5, 5, 5"
+                     Margin="5"
                      Content="Детский стоматолог"
                      Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
-                     FontWeight="Bold"/>            
-       
-    </StackPanel>
-
-        
-
-        
-
+                     FontWeight="Bold"/> 
+        </StackPanel>
     </Grid>
 </Page>
