@@ -21,17 +21,20 @@
         <StackPanel Grid.Row="1" Grid.Column="1">
             <TextBlock Text="Здравствуйте!" 
                        FontSize="34"
-                       HorizontalAlignment="Center" />
+                        FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
             <TextBlock Text="Кто вы?"  
                        FontSize="34"
                        HorizontalAlignment="Center"/>
 
             <StackPanel Margin="50">
-                <Button Padding="10" 
+                <Button x:Name="patientBtn"
+                    Padding="10" 
                     HorizontalAlignment="Stretch"
                     Content="Пациент"
                     FontSize="34"
-                    Background="#72bb53"/>
+                    Background="#72bb53"
+                    Click="patientBtn_Click"/>
                 <Button Padding="0"
                         Margin="60,40,60,0"
                         MinHeight="50"

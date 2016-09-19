@@ -20,16 +20,16 @@ namespace Lab1.Presentation.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class RolesPage : Page
+    public sealed partial class PatientMainPage : Page
     {
-        public RolesPage()
+        public PatientMainPage()
         {
             this.InitializeComponent();
         }
 
-        private void patientBtn_Click(object sender, RoutedEventArgs e)
+        private void consBtn_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(PatientMainPage));
+            Frame.Navigate(typeof(ConsultPage));
         }
     }
 }

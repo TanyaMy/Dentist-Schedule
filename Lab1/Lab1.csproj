@@ -95,8 +95,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Views\ConsultPage.xaml.cs">
+      <DependentUpon>ConsultPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\PatientMainPage.xaml.cs">
+      <DependentUpon>PatientMainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Views\RolesPage.xaml.cs">
       <DependentUpon>RolesPage.xaml</DependentUpon>
@@ -139,7 +145,15 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
+    <Page Include="Presentation\Views\ConsultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentation\Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\PatientMainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
