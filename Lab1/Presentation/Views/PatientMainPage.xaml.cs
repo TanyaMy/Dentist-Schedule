@@ -27,7 +27,7 @@ namespace Lab1.Presentation.Views
             this.InitializeComponent();
         }
 
-        private void consBtn_Click(object sender, RoutedEventArgs e)
+        private void ConsultationBtn_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(ConsultPage));
         }

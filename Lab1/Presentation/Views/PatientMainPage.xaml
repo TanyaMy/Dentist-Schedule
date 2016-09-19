@@ -20,65 +20,56 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="10" VerticalAlignment="Center"> 
-                <Button  x:Name="consBtn"
+                <Button  x:Name="ConsultationBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
                      Margin="5, 5, 5, 5"
                      Content="Консультация"
-                     Background="#FF9EF7A6"
+                     Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
                      FontWeight="Bold"
-                     BorderThickness="10"
-                     BorderBrush="#FF61F36E" Click="consBtn_Click"/>
+                     Click="ConsultationBtn_Click"/>
             
-                <Button  x:Name="surgBtn"
+                <Button  x:Name="SurgeryBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
                      Margin="5, 5, 5, 5"
                      Content="Хирургия"
-                     Background="#FFC1A7F0"
+                     Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
-                     FontWeight="Bold" 
-                     BorderThickness="10"
-                     BorderBrush="#FFB085FF"/>
+                     FontWeight="Bold"/>
             
-                <Button  x:Name="cosmetBtn"
+                <Button  x:Name="CosmetologyBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
                      Margin="5, 5, 5, 5"
                      Content="Косметология"
-                     Background="#FF9EF7A6"
+                     Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
-                     FontWeight="Bold"
-                     BorderThickness="10"
-                     BorderBrush="#FF61F36E"/>
+                     FontWeight="Bold"/>
            
-                <Button  x:Name="fillingBtn"
+                <Button  x:Name="FillingBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
                      Margin="5, 5, 5, 5"
                      Content="Пломбирование"
-                     Background="#FFC1A7F0"
+                     Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
-                     FontWeight="Bold"
-                     BorderThickness="10"
-                     BorderBrush="#FFB085FF"/>
+                     FontWeight="Bold"/>
             
-                <Button  x:Name="childBtn"
+                <Button  x:Name="ChidrenBtn"
                      HorizontalAlignment="Stretch"
                      VerticalAlignment="Stretch"
                      Margin="5, 5, 5, 5"
                      Content="Детский стоматолог"
-                      Background="#FF9EF7A6"
+                     Background="#FF62EA6E"
                      FontStyle="Italic"
                      FontSize="30"
-                     FontWeight="Bold"
-                     BorderThickness="10"
-                     BorderBrush="#FF61F36E"/>            
+                     FontWeight="Bold"/>            
        
     </StackPanel>
 

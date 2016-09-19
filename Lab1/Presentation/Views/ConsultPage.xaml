@@ -15,9 +15,9 @@
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="10*" MinHeight="400"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*" MinHeight="400"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
 
@@ -39,30 +39,44 @@
 
 
             <TextBox x:Name="nameTB"
-                     Text="Имя"
+                     PlaceholderText="Имя"
                      FontSize="12"
-                     Margin="5"/>
+                     Margin="4"/>
             <TextBox x:Name="surnameTB"
-                     Text="Фамилия"
+                     PlaceholderText="Фамилия"
                      FontSize="12"
-                     Margin="5"/>
+                     Margin="4"/>
             <TextBox x:Name="phoneTB"
-                     Text="Телефон"
+                     PlaceholderText="Телефон"
                      FontSize="12"
-                     Margin="5"/>
+                     Margin="4"/>
             <TextBox x:Name="addressTB"
-                     Text="Адрес"
+                     PlaceholderText="Адрес"
                      FontSize="12"
-                     Margin="5"/>
+                     Margin="4"/>
             <TextBox x:Name="complaintsTB"
-                     Text="Жалобы"
+                     PlaceholderText="Жалобы"
                      FontSize="12"
-                     Margin="5" Height="70"/>
-            <ComboBox Margin="5" 
-                      SelectedValue="Ваш врач" 
-                      Width="296"/>
-            <DatePicker Margin="5"/>
-            <TimePicker Margin="5"/>
+                     Margin="4" Height="70"/>
+            <ComboBox Margin="4" 
+                      PlaceholderText="Ваш врач"
+                      Width="296">
+                <TextBlock>Нет</TextBlock>
+                <TextBlock>Андреев Б.В.</TextBlock>
+                <TextBlock>Иванов И.И.</TextBlock>
+                <TextBlock>Семенов А.Р.</TextBlock>
+                <TextBlock>Сидоров К.А.</TextBlock>
+                <TextBlock>Петров С.К.</TextBlock>
+            </ComboBox>
+            <TextBlock Text="Выберете удобные для вас дату и время приема:"
+                       Margin="4"/>
+            <DatePicker Margin="4"/>
+            <TimePicker Margin="4"/>
+            <Button x:Name="ReadyBtn"
+                    Content="Готово"
+                    Margin="4" 
+                    Width="150"
+                    FontSize="18"/>
         </StackPanel>
 
 
