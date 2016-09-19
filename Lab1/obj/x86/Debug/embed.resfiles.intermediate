@@ -1,4 +1,5 @@
 App.xbf
 Presentation\Resources\Colors.xbf
-Presentation\Views\MainPage.xbf
-Presentation\Views\RolesPage.xbf
+Presentation\Views\ConsultPage.xbf
+Presentation\Views\LoginPage.xbf
+Presentation\Views\PatientMainPage.xbf
