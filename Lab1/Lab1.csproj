@@ -95,14 +95,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\ViewModels\Common\ViewModelBase.cs" />
+    <Compile Include="Presentation\ViewModels\Common\ViewModelLocator.cs" />
+    <Compile Include="Presentation\ViewModels\LoginViewModel.cs" />
     <Compile Include="Presentation\Views\ConsultPage.xaml.cs">
       <DependentUpon>ConsultPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Views\PatientMainPage.xaml.cs">
       <DependentUpon>PatientMainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\Views\RolesPage.xaml.cs">
-      <DependentUpon>RolesPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -134,7 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Presentation\Common\" />
-    <Folder Include="Presentation\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Presentation\Resources\Colors.xaml">
@@ -146,11 +148,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\Views\PatientMainPage.xaml">
+    <Page Include="Presentation\Views\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\Views\RolesPage.xaml">
+    <Page Include="Presentation\Views\PatientMainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

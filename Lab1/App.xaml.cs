@@ -15,6 +15,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Views;
+using Lab1.Presentation.ViewModels;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Lab1
 {
@@ -29,6 +33,7 @@ namespace Lab1
         /// </summary>
         public App()
         {
+            RegisterDependencies();
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
@@ -73,11 +78,21 @@ namespace Lab1
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(RolesPage), e.Arguments);
+                    rootFrame.Navigate(typeof(LoginPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+        }
+
+
+        private void RegisterDependencies()
+        {
+            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+
+            SimpleIoc.Default.Register<INavigationService, NavigationService>();
+            
+            SimpleIoc.Default.Register<LoginViewModel>();
         }
 
         /// <summary>
