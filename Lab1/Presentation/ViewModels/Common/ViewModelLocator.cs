@@ -11,6 +11,8 @@ namespace Lab1.Presentation.ViewModels.Common
     {
         public LoginViewModel Login => GetViewModel<LoginViewModel>();
 
+        public RegistrationViewModel Registration => GetViewModel<RegistrationViewModel>();
+
         private T GetViewModel<T>()
         {
             return ServiceLocator.Current.GetInstance<T>();
