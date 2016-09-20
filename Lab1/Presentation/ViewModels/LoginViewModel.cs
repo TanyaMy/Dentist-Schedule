@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using Lab1.Presentation.ViewModels.Common;
+using Lab1.Domain.Managers;
 
 namespace Lab1.Presentation.ViewModels
 {
@@ -9,14 +10,17 @@ namespace Lab1.Presentation.ViewModels
     {
         private const string DoctorEmail = "doctor@nure.ua";
         private const string PatientEmail = "patient@nure.ua";
-        private const string DoctorPassword = "patient@nure.ua";
+        private const string DoctorPassword = "doctor@nure.ua";
         private const string PatientPassword = "patient@nure.ua";
 
         private string _email;
         private string _password;
+        private readonly IAuthenticationManager _authenticationManager;
 
-        public LoginViewModel()
+        public LoginViewModel(IAuthenticationManager authenticationManager)
         {
+            _authenticationManager = authenticationManager;
+
             SubmitCommand = new RelayCommand(Login);
 
             Email = String.Empty;

@@ -95,17 +95,25 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Domain\Managers\Concrete\AuthenticationManager.cs" />
+    <Compile Include="Domain\Managers\IAuthenticationManager.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelBase.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelLocator.cs" />
     <Compile Include="Presentation\ViewModels\LoginViewModel.cs" />
-    <Compile Include="Presentation\Views\ConsultPage.xaml.cs">
-      <DependentUpon>ConsultPage.xaml</DependentUpon>
+    <Compile Include="Presentation\Views\AppointmentPage.xaml.cs">
+      <DependentUpon>AppointmentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\DoctorPage.xaml.cs">
+      <DependentUpon>DoctorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Views\PatientMainPage.xaml.cs">
-      <DependentUpon>PatientMainPage.xaml</DependentUpon>
+    <Compile Include="Presentation\Views\PatientMenuPage.xaml.cs">
+      <DependentUpon>PatientMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\RegistrationPage.xaml.cs">
+      <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -144,7 +152,11 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-    <Page Include="Presentation\Views\ConsultPage.xaml">
+    <Page Include="Presentation\Views\AppointmentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\DoctorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,7 +164,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\Views\PatientMainPage.xaml">
+    <Page Include="Presentation\Views\PatientMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\RegistrationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

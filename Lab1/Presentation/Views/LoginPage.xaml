@@ -44,12 +44,13 @@
                     HorizontalAlignment="Stretch"
                     Margin="0,25,0,15"
                     FontSize="26"
-                    Content="Login"
+                    Content="Log in"
                     Foreground="White" 
                     Command="{Binding SubmitCommand}"/>
 
             <RelativePanel Margin="45,10">
-                <Button RelativePanel.AlignLeftWithPanel="True"
+                <Button x:Name="registerBtn"
+                        RelativePanel.AlignLeftWithPanel="True"
                         Content="Register"
                         Padding="30,10"
                         Background="Transparent"/>
