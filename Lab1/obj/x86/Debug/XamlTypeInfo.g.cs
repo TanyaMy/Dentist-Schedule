@@ -132,31 +132,37 @@ namespace Lab1.Lab1_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
+            _typeNameTable = new string[14];
             _typeNameTable[0] = "Lab1.Presentation.ViewModels.Common.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Lab1.Presentation.ViewModels.LoginViewModel";
             _typeNameTable[3] = "Lab1.Presentation.ViewModels.Common.ViewModelBase";
             _typeNameTable[4] = "GalaSoft.MvvmLight.ViewModelBase";
             _typeNameTable[5] = "GalaSoft.MvvmLight.ObservableObject";
-            _typeNameTable[6] = "Lab1.Presentation.Views.ConsultPage";
-            _typeNameTable[7] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[8] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[9] = "Lab1.Presentation.Views.LoginPage";
-            _typeNameTable[10] = "Lab1.Presentation.Views.PatientMainPage";
+            _typeNameTable[6] = "Lab1.Presentation.ViewModels.RegistrationViewModel";
+            _typeNameTable[7] = "Lab1.Presentation.Views.AppointmentPage";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[9] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[10] = "Lab1.Presentation.Views.DoctorPage";
+            _typeNameTable[11] = "Lab1.Presentation.Views.LoginPage";
+            _typeNameTable[12] = "Lab1.Presentation.Views.PatientMenuPage";
+            _typeNameTable[13] = "Lab1.Presentation.Views.RegistrationPage";
 
-            _typeTable = new global::System.Type[11];
+            _typeTable = new global::System.Type[14];
             _typeTable[0] = typeof(global::Lab1.Presentation.ViewModels.Common.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Lab1.Presentation.ViewModels.LoginViewModel);
             _typeTable[3] = typeof(global::Lab1.Presentation.ViewModels.Common.ViewModelBase);
             _typeTable[4] = typeof(global::GalaSoft.MvvmLight.ViewModelBase);
             _typeTable[5] = typeof(global::GalaSoft.MvvmLight.ObservableObject);
-            _typeTable[6] = typeof(global::Lab1.Presentation.Views.ConsultPage);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[9] = typeof(global::Lab1.Presentation.Views.LoginPage);
-            _typeTable[10] = typeof(global::Lab1.Presentation.Views.PatientMainPage);
+            _typeTable[6] = typeof(global::Lab1.Presentation.ViewModels.RegistrationViewModel);
+            _typeTable[7] = typeof(global::Lab1.Presentation.Views.AppointmentPage);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[10] = typeof(global::Lab1.Presentation.Views.DoctorPage);
+            _typeTable[11] = typeof(global::Lab1.Presentation.Views.LoginPage);
+            _typeTable[12] = typeof(global::Lab1.Presentation.Views.PatientMenuPage);
+            _typeTable[13] = typeof(global::Lab1.Presentation.Views.RegistrationPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -192,12 +198,13 @@ namespace Lab1.Lab1_XamlTypeInfo
         }
 
         private object Activate_0_ViewModelLocator() { return new global::Lab1.Presentation.ViewModels.Common.ViewModelLocator(); }
-        private object Activate_2_LoginViewModel() { return new global::Lab1.Presentation.ViewModels.LoginViewModel(); }
         private object Activate_3_ViewModelBase() { return new global::Lab1.Presentation.ViewModels.Common.ViewModelBase(); }
         private object Activate_5_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
-        private object Activate_6_ConsultPage() { return new global::Lab1.Presentation.Views.ConsultPage(); }
-        private object Activate_9_LoginPage() { return new global::Lab1.Presentation.Views.LoginPage(); }
-        private object Activate_10_PatientMainPage() { return new global::Lab1.Presentation.Views.PatientMainPage(); }
+        private object Activate_7_AppointmentPage() { return new global::Lab1.Presentation.Views.AppointmentPage(); }
+        private object Activate_10_DoctorPage() { return new global::Lab1.Presentation.Views.DoctorPage(); }
+        private object Activate_11_LoginPage() { return new global::Lab1.Presentation.Views.LoginPage(); }
+        private object Activate_12_PatientMenuPage() { return new global::Lab1.Presentation.Views.PatientMenuPage(); }
+        private object Activate_13_RegistrationPage() { return new global::Lab1.Presentation.Views.RegistrationPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -213,6 +220,7 @@ namespace Lab1.Lab1_XamlTypeInfo
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_0_ViewModelLocator;
                 userType.AddMemberName("Login");
+                userType.AddMemberName("Registration");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -246,31 +254,52 @@ namespace Lab1.Lab1_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 6:   //  Lab1.Presentation.Views.ConsultPage
-                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_ConsultPage;
+            case 6:   //  Lab1.Presentation.ViewModels.RegistrationViewModel
+                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Lab1.Presentation.ViewModels.Common.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::Lab1.Lab1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 8:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::Lab1.Lab1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 9:   //  Lab1.Presentation.Views.LoginPage
+            case 7:   //  Lab1.Presentation.Views.AppointmentPage
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_LoginPage;
+                userType.Activator = Activate_7_AppointmentPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  Lab1.Presentation.Views.PatientMainPage
+            case 8:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::Lab1.Lab1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 9:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::Lab1.Lab1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 10:   //  Lab1.Presentation.Views.DoctorPage
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_PatientMainPage;
+                userType.Activator = Activate_10_DoctorPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 11:   //  Lab1.Presentation.Views.LoginPage
+                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_LoginPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  Lab1.Presentation.Views.PatientMenuPage
+                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_12_PatientMenuPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  Lab1.Presentation.Views.RegistrationPage
+                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_13_RegistrationPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -284,6 +313,11 @@ namespace Lab1.Lab1_XamlTypeInfo
             var that = (global::Lab1.Presentation.ViewModels.Common.ViewModelLocator)instance;
             return that.Login;
         }
+        private object get_1_ViewModelLocator_Registration(object instance)
+        {
+            var that = (global::Lab1.Presentation.ViewModels.Common.ViewModelLocator)instance;
+            return that.Registration;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -296,6 +330,12 @@ namespace Lab1.Lab1_XamlTypeInfo
                 userType = (global::Lab1.Lab1_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Lab1.Presentation.ViewModels.Common.ViewModelLocator");
                 xamlMember = new global::Lab1.Lab1_XamlTypeInfo.XamlMember(this, "Login", "Lab1.Presentation.ViewModels.LoginViewModel");
                 xamlMember.Getter = get_0_ViewModelLocator_Login;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Lab1.Presentation.ViewModels.Common.ViewModelLocator.Registration":
+                userType = (global::Lab1.Lab1_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Lab1.Presentation.ViewModels.Common.ViewModelLocator");
+                xamlMember = new global::Lab1.Lab1_XamlTypeInfo.XamlMember(this, "Registration", "Lab1.Presentation.ViewModels.RegistrationViewModel");
+                xamlMember.Getter = get_1_ViewModelLocator_Registration;
                 xamlMember.SetIsReadOnly();
                 break;
             }

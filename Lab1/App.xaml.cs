@@ -23,6 +23,7 @@ using Lab1.Domain.Managers;
 using Lab1.Domain.Managers.Concrete;
 using System.Threading;
 using System.Globalization;
+using Lab1.Presentation.Helpers;
 
 namespace Lab1
 {
@@ -94,11 +95,12 @@ namespace Lab1
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-            SimpleIoc.Default.Register<INavigationService, NavigationService>();
+            SimpleIoc.Default.Register(() => NavigationServiceHepler.GetService);
             
-            SimpleIoc.Default.Register<LoginViewModel>();
-
             SimpleIoc.Default.Register<IAuthenticationManager, AuthenticationManager>();
+
+            SimpleIoc.Default.Register<LoginViewModel>();
+            SimpleIoc.Default.Register<RegistrationViewModel>();
         }
 
         /// <summary>

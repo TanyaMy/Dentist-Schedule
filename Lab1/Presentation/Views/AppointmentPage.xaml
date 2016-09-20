@@ -51,6 +51,7 @@
             <ComboBox Margin="5" 
                       PlaceholderText="The purpose of the visit"
                       Width="300"
+                      SelectedItem="{Binding }"
                       Background="White"
                       HorizontalAlignment="Center">
                 <TextBlock Text="Consultation"/>

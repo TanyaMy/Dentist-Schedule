@@ -5,7 +5,8 @@
     xmlns:local="using:Lab1.Presentation.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    DataContext="{Binding Registration, Source={StaticResource Locator}}">
 
     <Grid Background="Orange">
         <Grid.ColumnDefinitions>
@@ -28,10 +29,12 @@
                                   VerticalAlignment="Stretch"                       
                                   FontSize="18"
                                   Background="DodgerBlue"
-                                  Foreground="White"/>
+                                  Foreground="White"
+                                  Command="{Binding GoBackCommand}"/>
                 </StackPanel>
             </CommandBar.Content>
         </CommandBar>
+        
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Center"
                            Text="Registration"
@@ -87,9 +90,9 @@
                      FontSize="12"
                      Margin="4"/>
             <Button x:Name="ReadyBtn"
-                    Content="Готово"
+                    Content="Register"
                     Margin="5, 10, 5, 5" 
-                    Width="150"
+                    HorizontalAlignment="Stretch"
                     FontSize="18"
                     Background="DodgerBlue"
                     Foreground="White"/>
