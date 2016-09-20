@@ -8,5 +8,9 @@ namespace Lab1.Domain.Managers.Concrete
 {
     class AuthenticationManager : IAuthenticationManager
     {
+        public bool Login(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

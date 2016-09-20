@@ -8,5 +8,6 @@ namespace Lab1.Domain.Managers
 {
     public interface IAuthenticationManager
     {
+        bool Login(string email, string password);
     }
 }

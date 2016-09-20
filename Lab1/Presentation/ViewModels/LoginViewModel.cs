@@ -19,9 +19,9 @@ namespace Lab1.Presentation.ViewModels
 
         public LoginViewModel(IAuthenticationManager authenticationManager)
         {
-            SubmitCommand = new RelayCommand(Login);
-
             _authenticationManager = authenticationManager;
+
+            SubmitCommand = new RelayCommand(Login);
 
             Email = String.Empty;
             Password = String.Empty;
