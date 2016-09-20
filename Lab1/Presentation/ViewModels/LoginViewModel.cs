@@ -15,13 +15,13 @@ namespace Lab1.Presentation.ViewModels
 
         private string _email;
         private string _password;
-        IAuthenticationManager IAuthenticationManager;
+        private readonly IAuthenticationManager _authenticationManager;
 
-        public LoginViewModel(IAuthenticationManager IAuthManager)
+        public LoginViewModel(IAuthenticationManager authenticationManager)
         {
             SubmitCommand = new RelayCommand(Login);
 
-            IAuthenticationManager = IAuthManager;
+            _authenticationManager = authenticationManager;
 
             Email = String.Empty;
             Password = String.Empty;

@@ -18,12 +18,13 @@
             <RowDefinition Height="5*" MinHeight="400"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+
+        <!-- Top command bar-->
         <CommandBar Grid.Row="0" Grid.ColumnSpan="3" Background="DodgerBlue">
             <CommandBar.Content>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                     <AppBarButton x:Name="backBtn"
-                                  Icon="Back"
-                                  Click="backbtn_Click"   
+                                  Icon="Back" 
                                   VerticalAlignment="Stretch"                       
                                   FontSize="18"
                                   Background="DodgerBlue"
@@ -47,7 +48,7 @@
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
-                    Height="75" Click="ReceptionBtn_Click"/>
+                    Height="75"/>
             <Button x:Name="AboutBtn"
                     Content="About clinic"
                     Margin="5, 30, 5, 5"
@@ -64,9 +65,6 @@
                     Foreground="White"                    
                     HorizontalAlignment="Stretch"
                      Height="75"/>
-
         </StackPanel>
-
-
     </Grid>
 </Page>

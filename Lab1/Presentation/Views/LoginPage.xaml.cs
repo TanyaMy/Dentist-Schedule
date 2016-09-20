@@ -25,11 +25,6 @@ namespace Lab1.Presentation.Views
         public LoginPage()
         {
             this.InitializeComponent();
-        }
-
-        private void registerBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(RegistrationPage));
-        }
+        }        
     }
 }

@@ -25,16 +25,6 @@ namespace Lab1.Presentation.Views
         public PatientMenuPage()
         {
             this.InitializeComponent();
-        }
-
-        private void backbtn_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(LoginPage));
-        }
-
-        private void ReceptionBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AppointmentPage));
-        }
+        }        
     }
 }

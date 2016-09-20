@@ -8,7 +8,6 @@
     mc:Ignorable="d">
 
     <Grid Background="Orange">
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="3*" MinWidth="400"/>
@@ -21,7 +20,7 @@
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-
+        <!-- Top command bar-->
         <CommandBar Grid.Row="0" Grid.ColumnSpan="3" Background="DodgerBlue">
             <CommandBar.Content>
                 <StackPanel Orientation="Horizontal" 
@@ -31,10 +30,11 @@
                                   VerticalAlignment="Stretch"                       
                                   FontSize="18"
                                   Background="DodgerBlue"
-                                  Foreground="White" Click="backBtn_Click"/>
+                                  Foreground="White"/>
                 </StackPanel>
             </CommandBar.Content>
         </CommandBar>
+        
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Center"
                            Text="Dentist reception"
@@ -46,29 +46,33 @@
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch">
+            
+            <!-- ComboBox  "Visit purpose"-->
             <ComboBox Margin="5" 
                       PlaceholderText="The purpose of the visit"
                       Width="300"
                       Background="White"
                       HorizontalAlignment="Center">
-                <TextBlock>Consultation</TextBlock>
-                <TextBlock>Cosmetology</TextBlock>
-                <TextBlock>Filling</TextBlock>
-                <TextBlock>Сhildren's dentistry</TextBlock>
-                <TextBlock>Surgery</TextBlock>
-                <TextBlock>Other</TextBlock>
+                <TextBlock Text="Consultation"/>
+                <TextBlock  Text="Cosmetology"/>
+                <TextBlock  Text="Filling"/>
+                <TextBlock  Text="Сhildren's dentistry"/>
+                <TextBlock  Text="Surgery"/> 
+                <TextBlock  Text="Other"/>
             </ComboBox>
+
+            <!-- ComboBox  "Doctors"-->
             <ComboBox Margin="5" 
                       PlaceholderText="Your doctor"
                       Width="300"
                       Background="White"
                       HorizontalAlignment="Center">
-                <TextBlock>No</TextBlock>
-                <TextBlock>Andreev B</TextBlock>
-                <TextBlock>Petrova S</TextBlock>
-                <TextBlock>Semenov Р</TextBlock>
-                <TextBlock>Sidorov A</TextBlock>
-                <TextBlock>Smith J</TextBlock>
+                <TextBlock Text="No"/>
+                <TextBlock Text="Andreev B"/>
+                <TextBlock Text="Petrova S"/>
+                <TextBlock Text="Semenov Р"/>
+                <TextBlock Text="Sidorov A"/>
+                <TextBlock Text="Smith J"/>
             </ComboBox>
             <TextBlock Text="More convenient for your visit date and time"
                        HorizontalAlignment="Center"

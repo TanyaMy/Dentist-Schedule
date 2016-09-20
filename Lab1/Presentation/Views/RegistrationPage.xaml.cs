@@ -26,15 +26,5 @@ namespace Lab1.Presentation.Views
         {
             this.InitializeComponent();
         }
-
-        private void backbtn_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(LoginPage));
-        }
-
-        private void ReadyBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(PatientMenuPage));
-        }
     }
 }

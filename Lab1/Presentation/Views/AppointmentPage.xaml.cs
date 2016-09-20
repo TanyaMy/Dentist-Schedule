@@ -27,9 +27,5 @@ namespace Lab1.Presentation.Views
             this.InitializeComponent();
         }
 
-        private void backBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(PatientMenuPage));
-        }
     }
 }

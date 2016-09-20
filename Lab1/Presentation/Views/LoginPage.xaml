@@ -53,7 +53,7 @@
                         RelativePanel.AlignLeftWithPanel="True"
                         Content="Register"
                         Padding="30,10"
-                        Background="Transparent" Click="registerBtn_Click"/>
+                        Background="Transparent"/>
                 <Button RelativePanel.AlignRightWithPanel="True"
                         Content="Forgot password?"
                         Padding="10"

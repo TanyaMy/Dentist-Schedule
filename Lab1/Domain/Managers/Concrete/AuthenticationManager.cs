@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1.Domain.Managers.Concrete
 {
-    public class AuthenticationManager: IAuthenticationManager
+    class AuthenticationManager : IAuthenticationManager
     {
     }
 }
