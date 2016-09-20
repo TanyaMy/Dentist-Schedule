@@ -19,6 +19,10 @@ using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
 using Lab1.Presentation.ViewModels;
 using Microsoft.Practices.ServiceLocation;
+using Lab1.Domain.Managers;
+using Lab1.Domain.Managers.Concrete;
+using System.Threading;
+using System.Globalization;
 
 namespace Lab1
 {
@@ -32,10 +36,10 @@ namespace Lab1
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
         public App()
-        {
+        {           
             RegisterDependencies();
             this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            this.Suspending += OnSuspending;          
         }
 
         /// <summary>
@@ -93,6 +97,8 @@ namespace Lab1
             SimpleIoc.Default.Register<INavigationService, NavigationService>();
             
             SimpleIoc.Default.Register<LoginViewModel>();
+
+            SimpleIoc.Default.Register<IAuthenticationManager, AuthenticationManager>();
         }
 
         /// <summary>
