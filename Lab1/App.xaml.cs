@@ -96,8 +96,10 @@ namespace Lab1
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             SimpleIoc.Default.Register(() => NavigationServiceHepler.GetService);
-            
+
             SimpleIoc.Default.Register<IAuthenticationManager, AuthenticationManager>();
+            SimpleIoc.Default.Register<IPatientsManager, PatientsManager>();
+            
 
             SimpleIoc.Default.Register<LoginViewModel>();
             SimpleIoc.Default.Register<RegistrationViewModel>();
@@ -105,6 +107,7 @@ namespace Lab1
             SimpleIoc.Default.Register<AppointmentViewModel>();
             SimpleIoc.Default.Register<DoctorMenuViewModel>();
             SimpleIoc.Default.Register<PatientReviewViewModel>();
+            SimpleIoc.Default.Register<CalendarViewModel>();
         }
 
         /// <summary>

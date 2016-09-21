@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lab1.Presentation.ViewModels;
 using Lab1.Presentation.Views;
 
 namespace Lab1.Presentation.Models
@@ -20,7 +21,9 @@ namespace Lab1.Presentation.Models
         [PageType(typeof(DoctorMenuPage))]
         DoctorMenu,
         [PageType(typeof(PatientReviewPage))]
-        PatientReview
+        PatientReview,
+        [PageType(typeof(PatientsShedulePage))]
+        Calendar
 
     }
 
