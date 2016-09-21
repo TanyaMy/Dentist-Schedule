@@ -99,10 +99,12 @@
     <Compile Include="Domain\Managers\IAuthenticationManager.cs" />
     <Compile Include="Presentation\Helpers\NavigationServiceHelper.cs" />
     <Compile Include="Presentation\Models\PageKeys.cs" />
+    <Compile Include="Presentation\ViewModels\AppointmentViewModel.cs" />
     <Compile Include="Presentation\ViewModels\Common\Extensions.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelBase.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelLocator.cs" />
     <Compile Include="Presentation\ViewModels\LoginViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\PatientMenuViewModel.cs" />
     <Compile Include="Presentation\ViewModels\RegistrationViewModel.cs" />
     <Compile Include="Presentation\Views\AppointmentPage.xaml.cs">
       <DependentUpon>AppointmentPage.xaml</DependentUpon>

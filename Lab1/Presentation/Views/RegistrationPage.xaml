@@ -43,21 +43,25 @@
                            Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
             <TextBox x:Name="nameTB"
+                     Text="{Binding Name, Mode=TwoWay}"
                      PlaceholderText="Name"
                      Background="White"
                      FontSize="12"
                      Margin="4, 20, 4, 4"/>
             <TextBox x:Name="surnameTB"
+                     Text="{Binding Surname, Mode=TwoWay}"
                      PlaceholderText="Surname"
                      Background="White"
                      FontSize="12"
                      Margin="4"/>
             <TextBox x:Name="phoneTB"
+                     Text="{Binding Phone, Mode=TwoWay}"
                      PlaceholderText="Phone"
                      Background="White"
                      FontSize="12"
                      Margin="4"/>
             <TextBox x:Name="addressTB"
+                     Text="{Binding Address, Mode=TwoWay}"
                      PlaceholderText="Address"
                      Background="White"
                      FontSize="12"
@@ -65,6 +69,7 @@
             <TextBlock Text="Birth date" FontSize="16"
                        FontWeight="Bold" Margin="3"/>
             <DatePicker Margin="4,4,0,4"
+                        Date="{Binding Birthday, Mode=TwoWay}"
                         Background="White"
                         Language="en"/>
             <TextBlock Text="Select your e-mail and password:"
@@ -73,6 +78,7 @@
                            FontWeight="Bold"/>
             <TextBox x:Name="loginTB"
                      PlaceholderText="E-mail"
+                     Text="{Binding Login, Mode=TwoWay}"
                      Background="White"
                      FontSize="12"
                      Margin="4"/>
@@ -84,7 +90,7 @@
                      Margin="4"/>
 
             <PasswordBox x:Name="ConfirmPasswordBox"
-                Password="{Binding Password, Mode=TwoWay}"
+                Password="{Binding ConfirmPassword, Mode=TwoWay}"
                 PlaceholderText="Confirm password"
                      Background="White"
                      FontSize="12"
@@ -95,7 +101,8 @@
                     HorizontalAlignment="Stretch"
                     FontSize="18"
                     Background="DodgerBlue"
-                    Foreground="White"/>
+                    Foreground="White"
+                    Command="{Binding SubmitCommand}"/>
         </StackPanel>
     </Grid>
 </Page>

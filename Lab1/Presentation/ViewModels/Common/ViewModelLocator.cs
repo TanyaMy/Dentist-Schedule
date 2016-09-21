@@ -13,6 +13,10 @@ namespace Lab1.Presentation.ViewModels.Common
 
         public RegistrationViewModel Registration => GetViewModel<RegistrationViewModel>();
 
+        public PatientMenuViewModel PatientMenu => GetViewModel<PatientMenuViewModel>();
+
+        public AppointmentViewModel Appointment => GetViewModel<AppointmentViewModel>();
+
         private T GetViewModel<T>()
         {
             return ServiceLocator.Current.GetInstance<T>();
