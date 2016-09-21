@@ -14,12 +14,8 @@ namespace Lab1.Presentation.ViewModels
     {
         private readonly IAuthenticationManager _authenticationManager;
 
-        private readonly ICommand _goBackCommand;
-
-        private List<string> _purposeList = new List<string> { "Consultation", "Cosmetology", "Filling",
-            "Сhildren's dentistry", "Surgery", "Other"};
-        private List<string> _doctorList = new List<string> { "No", "Andreev B", "Petrova S",
-            "Semenov Р", "Sidorov A", "Smith J"};
+        private List<string> _purposeList;
+        private List<string> _doctorList;
         private string _purpose;
         private string _doctor;
         private DateTime _visitDate;
@@ -30,11 +26,15 @@ namespace Lab1.Presentation.ViewModels
         {
             _authenticationManager = authenticationManager;
 
-            SubmitCommand = new RelayCommand(Submit);
-            _goBackCommand = new RelayCommand(NavigationService.GoBack);            
-        }
+            _purposeList = new List<string> { "Consultation", "Cosmetology", "Filling",
+            "Сhildren's dentistry", "Surgery", "Other"};
 
-        public ICommand GoBackCommand => _goBackCommand;
+            _doctorList = new List<string> { "No", "Andreev B", "Petrova S",
+            "Semenov Р", "Sidorov A", "Smith J"};
+
+            SubmitCommand = new RelayCommand(Submit);                  
+        }
+       
         public ICommand SubmitCommand { get; }
 
         public List<string> PurposeList
@@ -95,10 +95,9 @@ namespace Lab1.Presentation.ViewModels
 
         private void CheckFields()
         {
-            if (
-                   (string.IsNullOrEmpty(_complaints)) || (!_purposeList.Contains(_purpose))
-                    || (!_doctorList.Contains(_doctor))
-               )
+            if ((string.IsNullOrEmpty(_complaints)) 
+                   || (!_purposeList.Contains(_purpose))
+                   || (!_doctorList.Contains(_doctor)))
             {
                 throw new Exception("You have to fill required fields!");
             }
