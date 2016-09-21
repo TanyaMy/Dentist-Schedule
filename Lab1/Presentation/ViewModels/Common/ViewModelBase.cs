@@ -26,6 +26,6 @@ namespace Lab1.Presentation.ViewModels.Common
 
         protected IDialogService DialogService { get; }
 
-        public ICommand GoBackCommand => _goBackCommand;        
+        public ICommand GoBackCommand { get; }        
     }
 }
