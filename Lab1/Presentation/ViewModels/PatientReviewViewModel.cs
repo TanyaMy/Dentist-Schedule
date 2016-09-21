@@ -10,17 +10,9 @@ namespace Lab1.Presentation.ViewModels
     {
         private readonly IAuthenticationManager _authenticationManager;
 
-        private readonly ICommand _goBackCommand;
-
         public PatientReviewViewModel(IAuthenticationManager authenticationManager)
         {
             _authenticationManager = authenticationManager;
-
-            _goBackCommand = new RelayCommand(NavigationService.GoBack);
-            ReceptionCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.Appointment));
         }
-
-        public ICommand GoBackCommand => _goBackCommand;
-        public ICommand ReceptionCommand { get; }
     }
 }

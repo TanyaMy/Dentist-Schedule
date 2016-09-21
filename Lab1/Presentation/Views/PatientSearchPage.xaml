@@ -1,12 +1,12 @@
 ﻿<Page
-    x:Class="Lab1.Presentation.Views.DoctorMenuPage"
+    x:Class="Lab1.Presentation.Views.PatientSearchPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Lab1.Presentation.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" 
-    DataContext="{Binding DoctorMenu, Source={StaticResource Locator}}">
+    mc:Ignorable="d"
+    DataContext="{Binding PatientSearch, Source={StaticResource Locator}}">
 
     <Grid Background="Orange">
         <Grid.ColumnDefinitions>
@@ -37,30 +37,31 @@
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"                    
                     VerticalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Center"
-                           Text="Hello, Doctor!"
-                           FontSize="32"
-                           FontWeight="Bold"
-                           Margin="5, 50, 5, 50"
-                           Foreground="#FF0B1A68"
-                           FontStyle="Italic"/>
-            <Button x:Name="CalendarBtn"
-                    Content="Calendar"
-                    Margin="5, 5, 5, 20"
-                    FontSize="32"
+                       Text="Search patient"
+                       FontSize="40"
+                       FontWeight="Bold"
+                       Margin="5, 15, 5, 5"/>
+            <TextBox x:Name="nameTB"
+                     PlaceholderText="Name"
+                     Background="White"
+                     FontSize="20"
+                     Height="Auto"
+                     Margin="10, 20, 10, 10"/>
+            <TextBox x:Name="surnameTB"
+                     PlaceholderText="Surname"
+                     Background="White"
+                      FontSize="20"
+                     Height="Auto"
+                     Margin="10"/>
+            <Button x:Name="PatientSearchBtn"
+                    Content="Find"
+                    Margin="10, 15 10, 10"
+                    FontSize="30"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
-                    Height="70"/>
-            <Button x:Name="PatientsBtn"
-                    Content="Patients"
-                    Margin="5, 10, 5, 20"
-                    FontSize="32"
-                    Background="DodgerBlue"
-                    Foreground="White"                    
-                    HorizontalAlignment="Stretch" 
-                    Command="{Binding PatientsCommand}"
-                    Height="70"/>
-           
+                    Command="{Binding SearchCommand}"
+                    Height="60"/>
         </StackPanel>
     </Grid>
 </Page>

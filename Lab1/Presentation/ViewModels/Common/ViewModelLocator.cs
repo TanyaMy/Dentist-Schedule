@@ -21,6 +21,8 @@ namespace Lab1.Presentation.ViewModels.Common
 
         public PatientReviewViewModel PatientReview => GetViewModel<PatientReviewViewModel>();
 
+        public PatientSearchViewModel PatientSearch => GetViewModel<PatientSearchViewModel>();
+
         private T GetViewModel<T>()
         {
             return ServiceLocator.Current.GetInstance<T>();

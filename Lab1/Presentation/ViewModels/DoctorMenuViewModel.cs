@@ -11,17 +11,13 @@ namespace Lab1.Presentation.ViewModels
     {
         private readonly IAuthenticationManager _authenticationManager;
 
-        private readonly ICommand _goBackCommand;
-
         public DoctorMenuViewModel(IAuthenticationManager authenticationManager)
         {
             _authenticationManager = authenticationManager;
 
-            _goBackCommand = new RelayCommand(NavigationService.GoBack);
-            SearchCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.PatientReview));
+            PatientsCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.PatientSearch));
         }
 
-        public ICommand GoBackCommand => _goBackCommand;
-        public ICommand SearchCommand { get; }
+        public ICommand PatientsCommand { get; }
     }
 }
