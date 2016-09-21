@@ -4,15 +4,16 @@ using Lab1.Presentation.Models;
 using Lab1.Presentation.ViewModels.Common;
 using System.Windows.Input;
 
+
 namespace Lab1.Presentation.ViewModels
 {
-    public class PatientMenuViewModel : ViewModelBase
+    public class DoctorMenuViewModel : ViewModelBase
     {
         private readonly IAuthenticationManager _authenticationManager;
 
         private readonly ICommand _goBackCommand;
 
-        public PatientMenuViewModel(IAuthenticationManager authenticationManager)
+        public DoctorMenuViewModel(IAuthenticationManager authenticationManager)
         {
             _authenticationManager = authenticationManager;
 

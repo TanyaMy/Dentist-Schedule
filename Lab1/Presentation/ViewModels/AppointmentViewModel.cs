@@ -40,6 +40,7 @@ namespace Lab1.Presentation.ViewModels
         public List<string> PurposeList
         {
             get { return _purposeList; }
+            set { Set(() => PurposeList, ref _purposeList, value); }
         }
 
         public string Purpose
@@ -51,6 +52,7 @@ namespace Lab1.Presentation.ViewModels
         public List<string> DoctorList
         {
             get { return _doctorList; }
+            set { Set(() => DoctorList, ref _doctorList, value); }
         }
 
         public string Doctor
