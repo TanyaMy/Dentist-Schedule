@@ -108,6 +108,7 @@ namespace Lab1
             SimpleIoc.Default.Register<DoctorMenuViewModel>();
             SimpleIoc.Default.Register<PatientReviewViewModel>();
             SimpleIoc.Default.Register<CalendarViewModel>();
+            SimpleIoc.Default.Register<PatientSearchViewModel>();
         }
 
         /// <summary>

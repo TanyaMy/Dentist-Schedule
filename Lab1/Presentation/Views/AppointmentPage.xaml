@@ -37,7 +37,7 @@
             </CommandBar.Content>
         </CommandBar>
         
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
             <TextBlock HorizontalAlignment="Center"
                            Text="Dentist reception"
                            FontSize="30"
@@ -46,57 +46,67 @@
                            FontStyle="Italic"
                            Margin="20"/>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch"
+        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center"
                     VerticalAlignment="Stretch">
             
             <!-- ComboBox  "Visit purpose"-->
+            <TextBlock Text="The purpose of the visit"                      
+                       FontWeight="Bold"
+                       Margin="5, 0, 5, 0"                      
+                       FontSize="16" VerticalAlignment="Center"/>
             <ComboBox Margin="5" 
-                      PlaceholderText="The purpose of the visit"
-                      Width="300"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
                       ItemsSource="{Binding PurposeList, Mode=TwoWay}"
-                      SelectedValue="{Binding Purpose}"
-                      Background="White"
-                      HorizontalAlignment="Center"/>
+                      SelectedItem="{Binding Purpose, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      Background="White"/>
 
 
             <!-- ComboBox  "Doctors"-->
-            <ComboBox Margin="5" 
-                      PlaceholderText="Your doctor"
-                      Width="300"
+            <TextBlock Text="Your doctor"
+                       HorizontalAlignment="Stretch"
+                       FontWeight="Bold"
+                       Margin="5, 0, 5, 0"                       
+                       FontSize="16" VerticalAlignment="Center"/>
+            <ComboBox Margin="5"
+                      HorizontalAlignment="Stretch"
                       Background="White"
                       ItemsSource="{Binding DoctorList}"
-                      SelectedItem="{Binding Doctor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                      HorizontalAlignment="Center"/>
+                      SelectedItem="{Binding Doctor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>            
             <TextBlock Text="More convenient for your visit date and time"
-                       HorizontalAlignment="Center"
-                       Margin="5, 30, 5, 20"
+                       HorizontalAlignment="Stretch"
+                       Margin="5, 15, 5, 0"
                        FontWeight="Bold"
                        FontSize="16" VerticalAlignment="Center"/>
+            
             <DatePicker Margin="5"
-                        Background="White" Width="300"
+                        Background="White"
                         Date="{Binding VisitDate}"
-                        HorizontalAlignment="Center"/>
+                        HorizontalAlignment="Stretch"/>
+            
             <TimePicker Margin="5"
                         Time="{Binding VisitTime, Mode=TwoWay}"
-                        Background="White" Width="300"
-                        HorizontalAlignment="Center"/>
+                        Background="White"
+                        HorizontalAlignment="Stretch"/>
+            <TextBlock Text="Complaints"                      
+                       FontWeight="Bold"
+                       Margin="5, 0, 5, 0"
+                       FontSize="16" VerticalAlignment="Stretch"/>
             <TextBox x:Name="complaintsTB"
                      Text="{Binding Complaints, Mode=TwoWay}"
-                     PlaceholderText="Complaints"
-                     FontSize="14"
-                     Height="100"
+                     FontSize="16"
+                     Height="90"
+                     TextWrapping="Wrap"
                      Margin="5"
-                     HorizontalAlignment="Center"
-                     Width="300"
+                     HorizontalAlignment="Stretch"
                      Background="White"/>
             <Button x:Name="ReadyBtn"
                     Content="OK"
-                    Margin="5, 30, 5, 5" 
-                    Width="300"
+                    Margin="5" 
                     FontSize="22"
                     Background="DodgerBlue"
                     Foreground="White"                    
-                    HorizontalAlignment="Center"
+                    HorizontalAlignment="Stretch"
                     Command="{Binding SubmitCommand}"/>
         </StackPanel>
     </Grid>

@@ -49,13 +49,15 @@
         <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch">
             <TextBlock Text="Last visit date"
-                       Margin="3"
+                       Margin="3, 3, 3, 0"
                        FontWeight="Bold"                       
                        FontSize="16" VerticalAlignment="Center"/>
             <DatePicker Margin="3"
-                        Background="White" Width="300"/>
+                        IsEnabled="False"
+                        Background="Transparent"
+                        Width="300"/>
             <TextBlock Text="Last diagnosis and treatment"
-                       Margin="3"
+                       Margin="3, 10, 3, 0"
                        FontWeight="Bold"
                        FontSize="16" VerticalAlignment="Center"/>
             <TextBlock Text="Caries , holes in the teeth. Filling ,
@@ -67,19 +69,19 @@
                      Margin="3" />
             <Button x:Name="diseaseHistoryBtn"
                     Content="Disease history"
-                    Margin="3, 3, 3, 15" 
+                    Margin="3, 10, 3, 15" 
                     FontSize="22"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch"/>
             <TextBlock Text="Visit Date"
-                       Margin="3"
+                       Margin="3, 3, 3, 0"
                        FontWeight="Bold"
                        FontSize="16" VerticalAlignment="Center"/>
             <DatePicker Margin="3"
                         Background="White" Width="300"/>
             <TextBlock Text="Diagnosis and treatment"
-                       Margin="3"
+                       Margin="3, 3, 3, 0"
                        FontWeight="Bold"
                        FontSize="16" VerticalAlignment="Center"/>
             <TextBox x:Name="diagnosisTB"
@@ -90,8 +92,8 @@
                      Background="White"/>
             <Button x:Name="ReadyBtn"
                     Content="OK"
-                    Margin="5" 
-                    FontSize="22"
+                    Margin="3, 10, 3, 0" 
+                    FontSize="24"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch"/>
