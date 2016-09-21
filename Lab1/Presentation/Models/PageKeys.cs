@@ -17,8 +17,11 @@ namespace Lab1.Presentation.Models
         PatientMenu,
         [PageType(typeof(AppointmentPage))]
         Appointment,
-        [PageType(typeof(DoctorMenyPage))]
-        DoctorMenu
+        [PageType(typeof(DoctorMenuPage))]
+        DoctorMenu,
+        [PageType(typeof(PatientReviewPage))]
+        PatientReview
+
     }
 
     public class PageTypeAttribute : Attribute
