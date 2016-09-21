@@ -54,7 +54,7 @@
                       PlaceholderText="The purpose of the visit"
                       Width="300"
                       ItemsSource="{Binding PurposeList, Mode=TwoWay}"
-                      SelectedItem="{Binding Purpose, UpdateSourceTrigger=PropertyChanged}"                      
+                      SelectedValue="{Binding Purpose}"
                       Background="White"
                       HorizontalAlignment="Center"/>
 

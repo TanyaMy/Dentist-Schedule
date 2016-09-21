@@ -16,8 +16,6 @@ namespace Lab1.Presentation.ViewModels
     {
         private readonly IAuthenticationManager _authenticationManager;
 
-        private readonly ICommand _goBackCommand;
-
         private string _name;
         private string _surname;
         private string _phone;
@@ -32,11 +30,9 @@ namespace Lab1.Presentation.ViewModels
         {
             _authenticationManager = authenticationManager;
 
-            _goBackCommand = new RelayCommand(NavigationService.GoBack);
             SubmitCommand = new RelayCommand(Register);
         }
 
-        public ICommand GoBackCommand => _goBackCommand;
         public ICommand SubmitCommand { get; }
 
         public string Name
