@@ -106,6 +106,7 @@
     <Compile Include="Presentation\ViewModels\DoctorMenuViewModel.cs" />
     <Compile Include="Presentation\ViewModels\LoginViewModel.cs" />
     <Compile Include="Presentation\ViewModels\PatientMenuViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\PatientReviewViewModel.cs" />
     <Compile Include="Presentation\ViewModels\RegistrationViewModel.cs" />
     <Compile Include="Presentation\Views\AppointmentPage.xaml.cs">
       <DependentUpon>AppointmentPage.xaml</DependentUpon>
@@ -118,6 +119,9 @@
     </Compile>
     <Compile Include="Presentation\Views\PatientMenuPage.xaml.cs">
       <DependentUpon>PatientMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\PatientReviewPage.xaml.cs">
+      <DependentUpon>PatientReviewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Views\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
@@ -172,6 +176,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Presentation\Views\PatientMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\PatientReviewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

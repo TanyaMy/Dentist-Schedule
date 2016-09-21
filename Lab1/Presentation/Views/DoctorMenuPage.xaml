@@ -71,11 +71,12 @@
             <Button x:Name="PatientSearchBtn"
                     Content="Find"
                     Margin="5, 15 5, 5"
-                    FontSize="32"
+                    FontSize="30"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
-                    Height="70"/>
+                    Command="{Binding SearchCommand}"
+                    Height="60"/>
         </StackPanel>
     </Grid>
 </Page>
