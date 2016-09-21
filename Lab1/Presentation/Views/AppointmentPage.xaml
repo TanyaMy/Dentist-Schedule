@@ -54,7 +54,7 @@
                       PlaceholderText="The purpose of the visit"
                       Width="300"
                       ItemsSource="{Binding PurposeList, Mode=TwoWay}"
-                      SelectedValue="{Binding Purpose}"
+                      SelectedItem="{Binding Purpose, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                       Background="White"
                       HorizontalAlignment="Center"/>
 
@@ -67,19 +67,23 @@
                       ItemsSource="{Binding DoctorList}"
                       SelectedItem="{Binding Doctor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                       HorizontalAlignment="Center"/>
+            
             <TextBlock Text="More convenient for your visit date and time"
                        HorizontalAlignment="Center"
                        Margin="5, 30, 5, 20"
                        FontWeight="Bold"
                        FontSize="16" VerticalAlignment="Center"/>
+            
             <DatePicker Margin="5"
                         Background="White" Width="300"
                         Date="{Binding VisitDate}"
                         HorizontalAlignment="Center"/>
+            
             <TimePicker Margin="5"
                         Time="{Binding VisitTime, Mode=TwoWay}"
                         Background="White" Width="300"
                         HorizontalAlignment="Center"/>
+            
             <TextBox x:Name="complaintsTB"
                      Text="{Binding Complaints, Mode=TwoWay}"
                      PlaceholderText="Complaints"

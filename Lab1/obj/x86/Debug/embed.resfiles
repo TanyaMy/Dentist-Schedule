@@ -1,7 +1,8 @@
 App.xbf
 Presentation\Resources\Colors.xbf
 Presentation\Views\AppointmentPage.xbf
-Presentation\Views\DoctorPage.xbf
+Presentation\Views\DoctorMenuPage.xbf
 Presentation\Views\LoginPage.xbf
 Presentation\Views\PatientMenuPage.xbf
+Presentation\Views\PatientReviewPage.xbf
 Presentation\Views\RegistrationPage.xbf

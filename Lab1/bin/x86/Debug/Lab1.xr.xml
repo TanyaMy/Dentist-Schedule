@@ -1,13 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Appointment" />
+    <RootPropertyPathName Name="SubmitCommand" />
+    <RootPropertyPathName Name="Complaints" />
+    <RootPropertyPathName Name="VisitTime" />
+    <RootPropertyPathName Name="VisitDate" />
+    <RootPropertyPathName Name="DoctorList" />
+    <RootPropertyPathName Name="Doctor" />
+    <RootPropertyPathName Name="PurposeList" />
+    <RootPropertyPathName Name="Purpose" />
+    <RootPropertyPathName Name="GoBackCommand" />
+    <RootPropertyPathName Name="DoctorMenu" />
+    <RootPropertyPathName Name="SearchCommand" />
     <RootPropertyPathName Name="Login" />
     <RootPropertyPathName Name="RegistrationCommand" />
-    <RootPropertyPathName Name="SubmitCommand" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Email" />
+    <RootPropertyPathName Name="PatientMenu" />
+    <RootPropertyPathName Name="ReceptionCommand" />
+    <RootPropertyPathName Name="PatientReview" />
     <RootPropertyPathName Name="Registration" />
-    <RootPropertyPathName Name="GoBackCommand" />
+    <RootPropertyPathName Name="ConfirmPassword" />
+    <RootPropertyPathName Name="Birthday" />
+    <RootPropertyPathName Name="Address" />
+    <RootPropertyPathName Name="Phone" />
+    <RootPropertyPathName Name="Surname" />
+    <RootPropertyPathName Name="Name" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -17,9 +36,15 @@
     <RootType FullName="Lab1.Presentation.ViewModels.Common.ViewModelLocator" />
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
-      <RootProperty Name="Content" />
       <RootProperty Name="DataContext" />
+      <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="ColumnDefinitions" />
@@ -54,9 +79,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Width" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="Background" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -67,21 +93,26 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontStyle" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Date" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Language" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
       <RootProperty Name="Margin" />
+      <RootProperty Name="Time" />
       <RootProperty Name="Background" />
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Height" />
@@ -89,7 +120,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -99,10 +129,10 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Padding" />
       <RootProperty Name="Command" />
       <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />
@@ -113,12 +143,7 @@
       <RootProperty Name="Command" />
     </RootType>
     <RootType FullName="Lab1.Presentation.Views.AppointmentPage" />
-    <RootType FullName="Lab1.Presentation.Views.DoctorPage" />
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Source" />
-      <RootProperty Name="Mode" />
-    </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Lab1.Presentation.Views.DoctorMenuPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
       <RootProperty Name="Stretch" />
@@ -143,6 +168,7 @@
     </RootType>
     <RootType FullName="Lab1.Presentation.Views.LoginPage" />
     <RootType FullName="Lab1.Presentation.Views.PatientMenuPage" />
+    <RootType FullName="Lab1.Presentation.Views.PatientReviewPage" />
     <RootType FullName="Lab1.Presentation.Views.RegistrationPage" />
   </Roots.RootTypes>
 </Roots>
