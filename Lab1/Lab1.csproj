@@ -96,9 +96,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Managers\Concrete\AuthenticationManager.cs" />
+    <Compile Include="Domain\Managers\Concrete\PatientsManager.cs" />
     <Compile Include="Domain\Managers\IAuthenticationManager.cs" />
+    <Compile Include="Domain\Managers\IPatientsManager.cs" />
     <Compile Include="Presentation\Helpers\NavigationServiceHelper.cs" />
     <Compile Include="Presentation\Models\PageKeys.cs" />
+    <Compile Include="Presentation\Models\Patient.cs" />
+    <Compile Include="Presentation\Models\Visit.cs" />
     <Compile Include="Presentation\ViewModels\AppointmentViewModel.cs" />
     <Compile Include="Presentation\ViewModels\Common\Extensions.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelBase.cs" />
@@ -107,7 +111,7 @@
     <Compile Include="Presentation\ViewModels\LoginViewModel.cs" />
     <Compile Include="Presentation\ViewModels\PatientMenuViewModel.cs" />
     <Compile Include="Presentation\ViewModels\PatientReviewViewModel.cs" />
-    <Compile Include="Presentation\ViewModels\PatientSearchViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\CalendarViewModel.cs" />
     <Compile Include="Presentation\ViewModels\RegistrationViewModel.cs" />
     <Compile Include="Presentation\Views\AppointmentPage.xaml.cs">
       <DependentUpon>AppointmentPage.xaml</DependentUpon>
@@ -124,8 +128,8 @@
     <Compile Include="Presentation\Views\PatientReviewPage.xaml.cs">
       <DependentUpon>PatientReviewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Views\PatientSearchPage.xaml.cs">
-      <DependentUpon>PatientSearchPage.xaml</DependentUpon>
+    <Compile Include="Presentation\Views\PatientsShedulePage.xaml.cs">
+      <DependentUpon>PatientsShedulePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Views\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
@@ -187,7 +191,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\Views\PatientSearchPage.xaml">
+    <Page Include="Presentation\Views\PatientsShedulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

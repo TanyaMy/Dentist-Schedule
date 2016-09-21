@@ -15,9 +15,12 @@ namespace Lab1.Presentation.ViewModels
         {
             _authenticationManager = authenticationManager;
 
-            PatientsCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.PatientSearch));
+            GoCalendarCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.Calendar));
+            GoPatientsCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.PatientSearch));
         }
 
-        public ICommand PatientsCommand { get; }
+        public ICommand GoCalendarCommand { get; }
+
+        public ICommand GoPatientsCommand { get; }
     }
 }
