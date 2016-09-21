@@ -17,6 +17,8 @@ namespace Lab1.Presentation.ViewModels.Common
 
         public AppointmentViewModel Appointment => GetViewModel<AppointmentViewModel>();
 
+        public DoctorMenuViewModel DoctorMenu => GetViewModel<DoctorMenuViewModel>();
+
         private T GetViewModel<T>()
         {
             return ServiceLocator.Current.GetInstance<T>();

@@ -103,14 +103,15 @@
     <Compile Include="Presentation\ViewModels\Common\Extensions.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelBase.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelLocator.cs" />
+    <Compile Include="Presentation\ViewModels\DoctorMenuViewModel.cs" />
     <Compile Include="Presentation\ViewModels\LoginViewModel.cs" />
     <Compile Include="Presentation\ViewModels\PatientMenuViewModel.cs" />
     <Compile Include="Presentation\ViewModels\RegistrationViewModel.cs" />
     <Compile Include="Presentation\Views\AppointmentPage.xaml.cs">
       <DependentUpon>AppointmentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Views\DoctorPage.xaml.cs">
-      <DependentUpon>DoctorPage.xaml</DependentUpon>
+    <Compile Include="Presentation\Views\DoctorMenuPage.xaml.cs">
+      <DependentUpon>DoctorMenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -162,7 +163,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\Views\DoctorPage.xaml">
+    <Page Include="Presentation\Views\DoctorMenuPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

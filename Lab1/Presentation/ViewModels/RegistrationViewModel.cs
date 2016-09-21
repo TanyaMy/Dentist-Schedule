@@ -124,6 +124,7 @@ namespace Lab1.Presentation.ViewModels
                 throw new Exception("Your password has to contain not less than 6 symbols!");
             }
 
+
             if (string.IsNullOrEmpty(_name)||
                 string.IsNullOrEmpty(_surname) ||
                 string.IsNullOrEmpty(_phone) ||

@@ -68,6 +68,7 @@ namespace Lab1.Presentation.ViewModels
                 if (Password == DoctorPassword)
                 {
                     message = "Hello, Doctor! You are logged in!";
+                    NavigationService.NavigateTo(PageKeys.DoctorMenu);
                 }
                 else
                 {
