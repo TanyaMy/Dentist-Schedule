@@ -5,13 +5,15 @@
     xmlns:local="using:Lab1.Presentation.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    DataContext="{Binding PatientMenu, Source={StaticResource Locator}}">
+
 
     <Grid Background="Orange">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*" MinWidth="400"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*" MinWidth="400"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -27,6 +29,7 @@
                                   Icon="Back" 
                                   VerticalAlignment="Stretch"                       
                                   FontSize="18"
+                                  Command="{Binding GoBackCommand}"
                                   Background="DodgerBlue"
                                   Foreground="White"/>
                 </StackPanel>
@@ -35,7 +38,7 @@
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"                    
                     VerticalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Center"
-                           Text="Hello, (Имя + Фамилия)"
+                           Text="Hello, Patient"
                            FontSize="30"
                            FontWeight="Bold"
                        Margin="5, 50, 5, 50"
@@ -43,28 +46,37 @@
                            FontStyle="Italic"/>
             <Button x:Name="ReceptionBtn"
                     Content="Dentist reception"
-                    Margin="5, 30, 5, 5"
+                    Margin="5, 15 5, 5"
                     FontSize="30"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
-                    Height="75"/>
+                    Height="70"
+                    Command="{Binding ReceptionCommand}"/>
+            <Button x:Name="OfferBtn"
+                    Content="Special offers"
+                    Margin="5, 15 5, 5"
+                    FontSize="30"
+                    Background="DodgerBlue"
+                    Foreground="White"                    
+                    HorizontalAlignment="Stretch" 
+                    Height="70"/>
             <Button x:Name="AboutBtn"
                     Content="About clinic"
-                    Margin="5, 30, 5, 5"
+                    Margin="5, 15 5, 5"
                     FontSize="30"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
-                    Height="75"/>
+                    Height="70"/>
             <Button x:Name="FactsBtn"
                     Content="Interesting facts"
-                    Margin="5, 30, 5, 5"
+                    Margin="5, 15, 5, 5"
                     FontSize="30"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch"
-                     Height="75"/>
+                    Height="70"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -8,15 +8,13 @@ using Windows.UI.Xaml.Automation;
 using GalaSoft.MvvmLight.Command;
 using Lab1.Domain.Managers;
 using Lab1.Presentation.ViewModels.Common;
+using Lab1.Presentation.Models;
 
 namespace Lab1.Presentation.ViewModels
 {
     public class RegistrationViewModel : ViewModelBase
     {
         private readonly IAuthenticationManager _authenticationManager;
-
-        private readonly ICommand _goBackCommand;
-        private readonly ICommand _submitCommand;
 
         private string _name;
         private string _surname;
@@ -32,11 +30,10 @@ namespace Lab1.Presentation.ViewModels
         {
             _authenticationManager = authenticationManager;
 
-            _goBackCommand = new RelayCommand(NavigationService.GoBack);
-            _submitCommand = new RelayCommand(Register);
+            SubmitCommand = new RelayCommand(Register);
         }
 
-        public ICommand GoBackCommand => _goBackCommand;
+        public ICommand SubmitCommand { get; }
 
         public string Name
         {
@@ -95,12 +92,14 @@ namespace Lab1.Presentation.ViewModels
             catch (Exception ex)
             {
                 DialogService.ShowError(ex, "Registration", "OK", null);
+                return;
             }
 
             _authenticationManager.Register(_login, _password);
             _authenticationManager.UpdateAccountInfo(_name, _surname, _phone, _birthDate, _address);
 
             DialogService.ShowMessageBox("Registration is successful", "Registration");
+            NavigationService.NavigateTo(PageKeys.PatientMenu);
         }
 
         private void CheckFields()
@@ -108,6 +107,29 @@ namespace Lab1.Presentation.ViewModels
             if (_password != _confirmPassword)
             {
                 throw new Exception("Passwords don't match");
+            }
+
+            if (_login.Length < 6)
+            {
+                throw new Exception("Your email has to contain not less than 6 symbols!");
+            }
+
+            if (_password.Length == 0)
+            {
+                throw new Exception("You didn't entered password!");
+            }
+
+            if (_password.Length < 6)
+            {
+                throw new Exception("Your password has to contain not less than 6 symbols!");
+            }
+
+            if (string.IsNullOrEmpty(_name)||
+                string.IsNullOrEmpty(_surname) ||
+                string.IsNullOrEmpty(_phone) ||
+                string.IsNullOrEmpty(_address))
+            {
+                throw new Exception("You have to fill required fields!");
             }
 
             if (string.IsNullOrEmpty(_login))

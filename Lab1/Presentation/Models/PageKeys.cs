@@ -12,7 +12,11 @@ namespace Lab1.Presentation.Models
         [PageType(typeof(LoginPage))]
         Login,
         [PageType(typeof(RegistrationPage))]
-        Registration
+        Registration,
+        [PageType(typeof(PatientMenuPage))]
+        PatientMenu,
+        [PageType(typeof(AppointmentPage))]
+        Appointment
     }
 
     public class PageTypeAttribute : Attribute

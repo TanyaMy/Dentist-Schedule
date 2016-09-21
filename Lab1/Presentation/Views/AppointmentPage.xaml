@@ -5,7 +5,8 @@
     xmlns:local="using:Lab1.Presentation.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    DataContext="{Binding Appointment, Source={StaticResource Locator}}">
 
     <Grid Background="Orange">
         <Grid.ColumnDefinitions>
@@ -30,7 +31,8 @@
                                   VerticalAlignment="Stretch"                       
                                   FontSize="18"
                                   Background="DodgerBlue"
-                                  Foreground="White"/>
+                                  Foreground="White"
+                                  Command="{Binding GoBackCommand}"/>
                 </StackPanel>
             </CommandBar.Content>
         </CommandBar>
@@ -51,30 +53,20 @@
             <ComboBox Margin="5" 
                       PlaceholderText="The purpose of the visit"
                       Width="300"
-                      SelectedItem="{Binding }"
+                      ItemsSource="{Binding PurposeList, Mode=TwoWay}"
+                      SelectedValue="{Binding Purpose}"
                       Background="White"
-                      HorizontalAlignment="Center">
-                <TextBlock Text="Consultation"/>
-                <TextBlock  Text="Cosmetology"/>
-                <TextBlock  Text="Filling"/>
-                <TextBlock  Text="Сhildren's dentistry"/>
-                <TextBlock  Text="Surgery"/> 
-                <TextBlock  Text="Other"/>
-            </ComboBox>
+                      HorizontalAlignment="Center"/>
+
 
             <!-- ComboBox  "Doctors"-->
             <ComboBox Margin="5" 
                       PlaceholderText="Your doctor"
                       Width="300"
                       Background="White"
-                      HorizontalAlignment="Center">
-                <TextBlock Text="No"/>
-                <TextBlock Text="Andreev B"/>
-                <TextBlock Text="Petrova S"/>
-                <TextBlock Text="Semenov Р"/>
-                <TextBlock Text="Sidorov A"/>
-                <TextBlock Text="Smith J"/>
-            </ComboBox>
+                      ItemsSource="{Binding DoctorList}"
+                      SelectedValue="{Binding Doctor, Mode=TwoWay}"
+                      HorizontalAlignment="Center"/>
             <TextBlock Text="More convenient for your visit date and time"
                        HorizontalAlignment="Center"
                        Margin="5, 30, 5, 20"
@@ -82,11 +74,15 @@
                        FontSize="16" VerticalAlignment="Center"/>
             <DatePicker Margin="5"
                         Background="White" Width="300"
+                        Date="{Binding VisitDate}"
                         HorizontalAlignment="Center"/>
             <TimePicker Margin="5"
+                        Time="{Binding VisitTime, Mode=TwoWay}"
                         Background="White" Width="300"
                         HorizontalAlignment="Center"/>
             <TextBox x:Name="complaintsTB"
+                     Text="{Binding Complaints, Mode=TwoWay}"
+                     
                      PlaceholderText="Complaints"
                      FontSize="14"
                      Height="100"
@@ -101,7 +97,8 @@
                     FontSize="22"
                     Background="DodgerBlue"
                     Foreground="White"                    
-                    HorizontalAlignment="Center"/>
+                    HorizontalAlignment="Center"
+                    Command="{Binding SubmitCommand}"/>
         </StackPanel>
     </Grid>
 </Page>

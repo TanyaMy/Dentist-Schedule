@@ -34,7 +34,7 @@ namespace Lab1.Presentation.ViewModels
         }
 
         public ICommand SubmitCommand { get; }
-        public ICommand RegistrationCommand { get; }
+        public ICommand RegistrationCommand { get; }        
 
         public string Email
         {
@@ -79,17 +79,17 @@ namespace Lab1.Presentation.ViewModels
                 if (Password == PatientPassword)
                 {
                     message = "Hello, Patient! You are logged in!";
+                    NavigationService.NavigateTo(PageKeys.PatientMenu);
                 }
                 else
                 {
                     message = "Hello, Patient! Your password is wrong!";
-                }
+                }               
             }
             else
             {
                 message = "Wrong email!";
             }
-
             DialogService.ShowMessage(message, "Authorization");
         }
 
