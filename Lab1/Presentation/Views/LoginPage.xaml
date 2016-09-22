@@ -20,6 +20,30 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
+                    CompositeMode="SourceOver" Background="DodgerBlue">
+            <CommandBar.Content>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <AppBarButton x:Name="backBtn"
+                                  Icon="Back" 
+                                  VerticalAlignment="Stretch"                       
+                                  FontSize="18"
+                                  Command="{Binding GoBackCommand}"
+                                  Background="DodgerBlue"
+                                  Foreground="White"/>
+                </StackPanel>
+            </CommandBar.Content>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="LogOffBtn"
+                              Background="DodgerBlue"
+                              VerticalAlignment="Stretch" 
+                              HorizontalAlignment="Stretch"
+                              Foreground="White"    
+                              Command="{Binding LogOffCommand}"
+                              Label="Log off"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
         <StackPanel Grid.Column="1" Grid.Row="1">
             <Image Source="ms-appx:///Assets/Images/teeth.png" 
                    Stretch="Uniform"
@@ -27,6 +51,7 @@
                    Margin="25"/>
             <TextBlock Text="E-Mail" FontSize="22"/>
             <TextBox x:Name="EmailTextBox"
+                IsSpellCheckEnabled="False" 
                 Text="{Binding Email, Mode=TwoWay}"
                 HorizontalAlignment="Stretch" 
                 Background="White"
@@ -49,25 +74,15 @@
                     Command="{Binding SubmitCommand}"/>
 
             <RelativePanel Margin="45,10">
-                <Button x:Name="registerBtn"
-                        RelativePanel.AlignLeftWithPanel="True"
-                        Content="Register"
-                        Padding="30,10"
-                        Background="Transparent"
-                        Command="{Binding RegistrationCommand}"/>
-                <Button RelativePanel.AlignRightWithPanel="True"
+                <Button RelativePanel.AlignLeftWithPanel="True"
                         Content="Forgot password?"
+                        Padding="10"
+                        Background="Transparent" />
+                <Button RelativePanel.AlignRightWithPanel="True"
+                        Content="Help"
                         Padding="10"
                         Background="Transparent"/>
             </RelativePanel>
         </StackPanel>
-
-        <Button Grid.Row="2" Grid.Column="1"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Center"
-                Margin="15"
-                Padding="50,10"
-                Content="Help"
-                Background="Transparent"/>
     </Grid>
 </Page>

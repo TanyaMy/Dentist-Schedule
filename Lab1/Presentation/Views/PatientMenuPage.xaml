@@ -22,7 +22,8 @@
         </Grid.RowDefinitions>
 
         <!-- Top command bar-->
-        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" Background="DodgerBlue">
+        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
+                    CompositeMode="SourceOver" Background="DodgerBlue">
             <CommandBar.Content>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                     <AppBarButton x:Name="backBtn"
@@ -34,6 +35,15 @@
                                   Foreground="White"/>
                 </StackPanel>
             </CommandBar.Content>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="LogOffBtn"
+                              Background="DodgerBlue"
+                              VerticalAlignment="Stretch" 
+                              HorizontalAlignment="Stretch"
+                              Foreground="White"                              
+                              Label="Log off"
+                              Command="{Binding LogOffCommand}"/>
+            </CommandBar.SecondaryCommands>
         </CommandBar>
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"                    
                     VerticalAlignment="Stretch">
@@ -53,6 +63,14 @@
                     HorizontalAlignment="Stretch" 
                     Height="70"
                     Command="{Binding ReceptionCommand}"/>
+            <Button x:Name="DentistSсheduleBtn"
+                    Content="Dentist Sсhedule"
+                    Margin="5, 15, 5, 5"
+                    FontSize="30"
+                    Background="DodgerBlue"
+                    Foreground="White"                    
+                    HorizontalAlignment="Stretch"
+                    Height="70"/>
             <Button x:Name="OfferBtn"
                     Content="Special offers"
                     Margin="5, 15 5, 5"
@@ -60,23 +78,7 @@
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
-                    Height="70"/>
-            <Button x:Name="AboutBtn"
-                    Content="About clinic"
-                    Margin="5, 15 5, 5"
-                    FontSize="30"
-                    Background="DodgerBlue"
-                    Foreground="White"                    
-                    HorizontalAlignment="Stretch" 
-                    Height="70"/>
-            <Button x:Name="FactsBtn"
-                    Content="Interesting facts"
-                    Margin="5, 15, 5, 5"
-                    FontSize="30"
-                    Background="DodgerBlue"
-                    Foreground="White"                    
-                    HorizontalAlignment="Stretch"
-                    Height="70"/>
+                    Height="70"/>         
         </StackPanel>
     </Grid>
 </Page>

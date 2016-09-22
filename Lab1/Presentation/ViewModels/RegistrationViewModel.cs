@@ -104,38 +104,32 @@ namespace Lab1.Presentation.ViewModels
 
         private void CheckFields()
         {
-            if (_password != _confirmPassword)
-            {
-                throw new Exception("Passwords don't match");
-            }
-
-            if (_login.Length < 6)
-            {
-                throw new Exception("Your email has to contain not less than 6 symbols!");
-            }
-
-            if (_password.Length == 0)
-            {
-                throw new Exception("You didn't entered password!");
-            }
-
-            if (_password.Length < 6)
-            {
-                throw new Exception("Your password has to contain not less than 6 symbols!");
-            }
-
-
-            if (string.IsNullOrEmpty(_name)||
+            if (string.IsNullOrEmpty(_name) ||
                 string.IsNullOrEmpty(_surname) ||
                 string.IsNullOrEmpty(_phone) ||
                 string.IsNullOrEmpty(_address))
             {
                 throw new Exception("You have to fill required fields!");
             }
-
-            if (string.IsNullOrEmpty(_login))
+            else if (string.IsNullOrEmpty(_login))
             {
-                throw new Exception("You have to enter email");
+                throw new Exception("You have to enter an e-mail");
+            }
+            else if (_password != _confirmPassword)
+            {
+                throw new Exception("Passwords don't match");
+            }
+            else if (_login.Length < 6)
+            {
+                throw new Exception("Your e-mail has to contain not less than 6 symbols!");
+            }
+            else if (string.IsNullOrEmpty(_password))
+            {
+                throw new Exception("You didn't entered password!");
+            }
+            else if (_password.Length < 6)
+            {
+                throw new Exception("Your password has to contain not less than 6 symbols!");
             }
         }
     }

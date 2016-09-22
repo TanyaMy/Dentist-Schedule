@@ -21,11 +21,11 @@ namespace Lab1.Presentation.Models
         [PageType(typeof(DoctorMenuPage))]
         DoctorMenu,
         [PageType(typeof(PatientReviewPage))]
-        PatientReview,
-        [PageType(typeof(PatientSearchPage))]
-        PatientSearch,
+        PatientReview,        
         [PageType(typeof(PatientsShedulePage))]
-        Calendar
+        Calendar,
+        [PageType(typeof(MainPage))]
+        Main
     }
 
     public class PageTypeAttribute : Attribute

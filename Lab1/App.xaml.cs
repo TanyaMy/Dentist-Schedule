@@ -83,7 +83,7 @@ namespace Lab1
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(LoginPage), e.Arguments);
+                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
@@ -108,7 +108,7 @@ namespace Lab1
             SimpleIoc.Default.Register<DoctorMenuViewModel>();
             SimpleIoc.Default.Register<PatientReviewViewModel>();
             SimpleIoc.Default.Register<CalendarViewModel>();
-            SimpleIoc.Default.Register<PatientSearchViewModel>();
+            SimpleIoc.Default.Register<MainViewModel>();
         }
 
         /// <summary>
