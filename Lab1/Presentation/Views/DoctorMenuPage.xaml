@@ -43,24 +43,24 @@
                            Margin="5, 50, 5, 50"
                            Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
-            <Button x:Name="CalendarBtn"
+            <Button x:Name="CalendarButton"
                     Content="Calendar"
                     Margin="5, 5, 5, 20"
                     FontSize="32"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
+                    Command="{Binding GoCalendarCommand}"
                     Height="70"/>
-            <Button x:Name="PatientsBtn"
+            <Button x:Name="PatientsButton"
                     Content="Patients"
-                    Margin="5, 10, 5, 20"
+                    Margin="5, 5, 5, 20"
                     FontSize="32"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
-                    Command="{Binding PatientsCommand}"
+                    Command="{Binding GoPatientsCommand}"
                     Height="70"/>
-           
         </StackPanel>
     </Grid>
 </Page>

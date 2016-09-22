@@ -12,7 +12,8 @@
     <RootPropertyPathName Name="Purpose" />
     <RootPropertyPathName Name="GoBackCommand" />
     <RootPropertyPathName Name="DoctorMenu" />
-    <RootPropertyPathName Name="SearchCommand" />
+    <RootPropertyPathName Name="GoPatientsCommand" />
+    <RootPropertyPathName Name="GoCalendarCommand" />
     <RootPropertyPathName Name="Login" />
     <RootPropertyPathName Name="RegistrationCommand" />
     <RootPropertyPathName Name="Password" />
@@ -20,6 +21,7 @@
     <RootPropertyPathName Name="PatientMenu" />
     <RootPropertyPathName Name="ReceptionCommand" />
     <RootPropertyPathName Name="PatientReview" />
+    <RootPropertyPathName Name="Calendar" />
     <RootPropertyPathName Name="Registration" />
     <RootPropertyPathName Name="ConfirmPassword" />
     <RootPropertyPathName Name="Birthday" />
@@ -80,9 +82,10 @@
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Width" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="SelectedValue" />
       <RootProperty Name="Background" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="SelectedItem" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -169,6 +172,13 @@
     <RootType FullName="Lab1.Presentation.Views.LoginPage" />
     <RootType FullName="Lab1.Presentation.Views.PatientMenuPage" />
     <RootType FullName="Lab1.Presentation.Views.PatientReviewPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CalendarView">
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="Language" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="IsTodayHighlighted" />
+    </RootType>
+    <RootType FullName="Lab1.Presentation.Views.PatientsShedulePage" />
     <RootType FullName="Lab1.Presentation.Views.RegistrationPage" />
   </Roots.RootTypes>
 </Roots>

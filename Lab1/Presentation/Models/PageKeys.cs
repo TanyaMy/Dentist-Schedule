@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lab1.Presentation.ViewModels;
 using Lab1.Presentation.Views;
 
 namespace Lab1.Presentation.Models
@@ -22,7 +23,9 @@ namespace Lab1.Presentation.Models
         [PageType(typeof(PatientReviewPage))]
         PatientReview,
         [PageType(typeof(PatientSearchPage))]
-        PatientSearch
+        PatientSearch,
+        [PageType(typeof(PatientsShedulePage))]
+        Calendar
     }
 
     public class PageTypeAttribute : Attribute

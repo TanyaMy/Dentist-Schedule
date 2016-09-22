@@ -132,7 +132,7 @@ namespace Lab1.Lab1_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[19];
+            _typeNameTable = new string[21];
             _typeNameTable[0] = "Lab1.Presentation.ViewModels.Common.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Lab1.Presentation.ViewModels.LoginViewModel";
@@ -144,16 +144,18 @@ namespace Lab1.Lab1_XamlTypeInfo
             _typeNameTable[8] = "Lab1.Presentation.ViewModels.AppointmentViewModel";
             _typeNameTable[9] = "Lab1.Presentation.ViewModels.DoctorMenuViewModel";
             _typeNameTable[10] = "Lab1.Presentation.ViewModels.PatientReviewViewModel";
-            _typeNameTable[11] = "Lab1.Presentation.Views.AppointmentPage";
-            _typeNameTable[12] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[13] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[14] = "Lab1.Presentation.Views.DoctorMenuPage";
-            _typeNameTable[15] = "Lab1.Presentation.Views.LoginPage";
-            _typeNameTable[16] = "Lab1.Presentation.Views.PatientMenuPage";
-            _typeNameTable[17] = "Lab1.Presentation.Views.PatientReviewPage";
-            _typeNameTable[18] = "Lab1.Presentation.Views.RegistrationPage";
+            _typeNameTable[11] = "Lab1.Presentation.ViewModels.CalendarViewModel";
+            _typeNameTable[12] = "Lab1.Presentation.Views.AppointmentPage";
+            _typeNameTable[13] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[14] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[15] = "Lab1.Presentation.Views.DoctorMenuPage";
+            _typeNameTable[16] = "Lab1.Presentation.Views.LoginPage";
+            _typeNameTable[17] = "Lab1.Presentation.Views.PatientMenuPage";
+            _typeNameTable[18] = "Lab1.Presentation.Views.PatientReviewPage";
+            _typeNameTable[19] = "Lab1.Presentation.Views.PatientsShedulePage";
+            _typeNameTable[20] = "Lab1.Presentation.Views.RegistrationPage";
 
-            _typeTable = new global::System.Type[19];
+            _typeTable = new global::System.Type[21];
             _typeTable[0] = typeof(global::Lab1.Presentation.ViewModels.Common.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Lab1.Presentation.ViewModels.LoginViewModel);
@@ -165,14 +167,16 @@ namespace Lab1.Lab1_XamlTypeInfo
             _typeTable[8] = typeof(global::Lab1.Presentation.ViewModels.AppointmentViewModel);
             _typeTable[9] = typeof(global::Lab1.Presentation.ViewModels.DoctorMenuViewModel);
             _typeTable[10] = typeof(global::Lab1.Presentation.ViewModels.PatientReviewViewModel);
-            _typeTable[11] = typeof(global::Lab1.Presentation.Views.AppointmentPage);
-            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[14] = typeof(global::Lab1.Presentation.Views.DoctorMenuPage);
-            _typeTable[15] = typeof(global::Lab1.Presentation.Views.LoginPage);
-            _typeTable[16] = typeof(global::Lab1.Presentation.Views.PatientMenuPage);
-            _typeTable[17] = typeof(global::Lab1.Presentation.Views.PatientReviewPage);
-            _typeTable[18] = typeof(global::Lab1.Presentation.Views.RegistrationPage);
+            _typeTable[11] = typeof(global::Lab1.Presentation.ViewModels.CalendarViewModel);
+            _typeTable[12] = typeof(global::Lab1.Presentation.Views.AppointmentPage);
+            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[14] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[15] = typeof(global::Lab1.Presentation.Views.DoctorMenuPage);
+            _typeTable[16] = typeof(global::Lab1.Presentation.Views.LoginPage);
+            _typeTable[17] = typeof(global::Lab1.Presentation.Views.PatientMenuPage);
+            _typeTable[18] = typeof(global::Lab1.Presentation.Views.PatientReviewPage);
+            _typeTable[19] = typeof(global::Lab1.Presentation.Views.PatientsShedulePage);
+            _typeTable[20] = typeof(global::Lab1.Presentation.Views.RegistrationPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -210,12 +214,13 @@ namespace Lab1.Lab1_XamlTypeInfo
         private object Activate_0_ViewModelLocator() { return new global::Lab1.Presentation.ViewModels.Common.ViewModelLocator(); }
         private object Activate_3_ViewModelBase() { return new global::Lab1.Presentation.ViewModels.Common.ViewModelBase(); }
         private object Activate_5_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
-        private object Activate_11_AppointmentPage() { return new global::Lab1.Presentation.Views.AppointmentPage(); }
-        private object Activate_14_DoctorMenuPage() { return new global::Lab1.Presentation.Views.DoctorMenuPage(); }
-        private object Activate_15_LoginPage() { return new global::Lab1.Presentation.Views.LoginPage(); }
-        private object Activate_16_PatientMenuPage() { return new global::Lab1.Presentation.Views.PatientMenuPage(); }
-        private object Activate_17_PatientReviewPage() { return new global::Lab1.Presentation.Views.PatientReviewPage(); }
-        private object Activate_18_RegistrationPage() { return new global::Lab1.Presentation.Views.RegistrationPage(); }
+        private object Activate_12_AppointmentPage() { return new global::Lab1.Presentation.Views.AppointmentPage(); }
+        private object Activate_15_DoctorMenuPage() { return new global::Lab1.Presentation.Views.DoctorMenuPage(); }
+        private object Activate_16_LoginPage() { return new global::Lab1.Presentation.Views.LoginPage(); }
+        private object Activate_17_PatientMenuPage() { return new global::Lab1.Presentation.Views.PatientMenuPage(); }
+        private object Activate_18_PatientReviewPage() { return new global::Lab1.Presentation.Views.PatientReviewPage(); }
+        private object Activate_19_PatientsShedulePage() { return new global::Lab1.Presentation.Views.PatientsShedulePage(); }
+        private object Activate_20_RegistrationPage() { return new global::Lab1.Presentation.Views.RegistrationPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -236,6 +241,7 @@ namespace Lab1.Lab1_XamlTypeInfo
                 userType.AddMemberName("Appointment");
                 userType.AddMemberName("DoctorMenu");
                 userType.AddMemberName("PatientReview");
+                userType.AddMemberName("Calendar");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -304,52 +310,66 @@ namespace Lab1.Lab1_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 11:   //  Lab1.Presentation.Views.AppointmentPage
-                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_AppointmentPage;
+            case 11:   //  Lab1.Presentation.ViewModels.CalendarViewModel
+                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Lab1.Presentation.ViewModels.Common.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  Windows.UI.Xaml.Controls.Page
+            case 12:   //  Lab1.Presentation.Views.AppointmentPage
+                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_12_AppointmentPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 13:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Lab1.Lab1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 13:   //  Windows.UI.Xaml.Controls.UserControl
+            case 14:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Lab1.Lab1_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 14:   //  Lab1.Presentation.Views.DoctorMenuPage
+            case 15:   //  Lab1.Presentation.Views.DoctorMenuPage
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_DoctorMenuPage;
+                userType.Activator = Activate_15_DoctorMenuPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Lab1.Presentation.Views.LoginPage
+            case 16:   //  Lab1.Presentation.Views.LoginPage
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_LoginPage;
+                userType.Activator = Activate_16_LoginPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Lab1.Presentation.Views.PatientMenuPage
+            case 17:   //  Lab1.Presentation.Views.PatientMenuPage
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_PatientMenuPage;
+                userType.Activator = Activate_17_PatientMenuPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  Lab1.Presentation.Views.PatientReviewPage
+            case 18:   //  Lab1.Presentation.Views.PatientReviewPage
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_PatientReviewPage;
+                userType.Activator = Activate_18_PatientReviewPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 18:   //  Lab1.Presentation.Views.RegistrationPage
+            case 19:   //  Lab1.Presentation.Views.PatientsShedulePage
                 userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_RegistrationPage;
+                userType.Activator = Activate_19_PatientsShedulePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 20:   //  Lab1.Presentation.Views.RegistrationPage
+                userType = new global::Lab1.Lab1_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_20_RegistrationPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -387,6 +407,11 @@ namespace Lab1.Lab1_XamlTypeInfo
         {
             var that = (global::Lab1.Presentation.ViewModels.Common.ViewModelLocator)instance;
             return that.PatientReview;
+        }
+        private object get_6_ViewModelLocator_Calendar(object instance)
+        {
+            var that = (global::Lab1.Presentation.ViewModels.Common.ViewModelLocator)instance;
+            return that.Calendar;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -430,6 +455,12 @@ namespace Lab1.Lab1_XamlTypeInfo
                 userType = (global::Lab1.Lab1_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Lab1.Presentation.ViewModels.Common.ViewModelLocator");
                 xamlMember = new global::Lab1.Lab1_XamlTypeInfo.XamlMember(this, "PatientReview", "Lab1.Presentation.ViewModels.PatientReviewViewModel");
                 xamlMember.Getter = get_5_ViewModelLocator_PatientReview;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Lab1.Presentation.ViewModels.Common.ViewModelLocator.Calendar":
+                userType = (global::Lab1.Lab1_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Lab1.Presentation.ViewModels.Common.ViewModelLocator");
+                xamlMember = new global::Lab1.Lab1_XamlTypeInfo.XamlMember(this, "Calendar", "Lab1.Presentation.ViewModels.CalendarViewModel");
+                xamlMember.Getter = get_6_ViewModelLocator_Calendar;
                 xamlMember.SetIsReadOnly();
                 break;
             }

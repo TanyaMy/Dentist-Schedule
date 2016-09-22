@@ -23,6 +23,8 @@ namespace Lab1.Presentation.ViewModels.Common
 
         public PatientSearchViewModel PatientSearch => GetViewModel<PatientSearchViewModel>();
 
+        public CalendarViewModel Calendar => GetViewModel<CalendarViewModel>();
+
         private T GetViewModel<T>()
         {
             return ServiceLocator.Current.GetInstance<T>();
