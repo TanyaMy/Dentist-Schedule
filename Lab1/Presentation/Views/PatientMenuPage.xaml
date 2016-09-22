@@ -45,6 +45,7 @@
                               Command="{Binding LogOffCommand}"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
+        
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"                    
                     VerticalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Center"
@@ -70,6 +71,7 @@
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch"
+                    Command="{Binding GoDoctorSchedule}"
                     Height="70"/>
             <Button x:Name="OfferBtn"
                     Content="Special offers"

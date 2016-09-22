@@ -2,7 +2,6 @@
 using Lab1.Domain.Managers;
 using Lab1.Presentation.Models;
 using Lab1.Presentation.ViewModels.Common;
-
 using System.Windows.Input;
 
 namespace Lab1.Presentation.ViewModels

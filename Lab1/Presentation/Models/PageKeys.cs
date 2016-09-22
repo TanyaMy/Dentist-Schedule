@@ -25,7 +25,9 @@ namespace Lab1.Presentation.Models
         [PageType(typeof(PatientsShedulePage))]
         Calendar,
         [PageType(typeof(MainPage))]
-        Main
+        Main,
+        [PageType(typeof(DoctorsSchedulePage))]
+        DoctorsSchedule
     }
 
     public class PageTypeAttribute : Attribute
