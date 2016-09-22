@@ -35,7 +35,8 @@
                 </StackPanel>
             </CommandBar.Content>
         </CommandBar>
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"                    
+        <StackPanel Grid.Row="1" Grid.Column="1" 
+                    HorizontalAlignment="Stretch"                    
                     VerticalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Center"
                            Text="Hello, Patient"
@@ -44,8 +45,8 @@
                        Margin="5, 50, 5, 50"
                            Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
-            <Button x:Name="ReceptionBtn"
-                    Content="Dentist reception"
+            <Button x:Name="RegistrationReceptionButton"
+                    Content="Registration to dentist reception"
                     Margin="5, 15 5, 5"
                     FontSize="30"
                     Background="DodgerBlue"
@@ -53,29 +54,21 @@
                     HorizontalAlignment="Stretch" 
                     Height="70"
                     Command="{Binding ReceptionCommand}"/>
-            <Button x:Name="OfferBtn"
+            <Button x:Name="SheduleButton"
+                    Content="Your shedule"
+                    Margin="5, 15 5, 5"
+                    FontSize="30"
+                    Background="DodgerBlue"
+                    Foreground="White"                    
+                    HorizontalAlignment="Stretch" 
+                    Height="70"/>
+            <Button x:Name="OffersButton"
                     Content="Special offers"
                     Margin="5, 15 5, 5"
                     FontSize="30"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
-                    Height="70"/>
-            <Button x:Name="AboutBtn"
-                    Content="About clinic"
-                    Margin="5, 15 5, 5"
-                    FontSize="30"
-                    Background="DodgerBlue"
-                    Foreground="White"                    
-                    HorizontalAlignment="Stretch" 
-                    Height="70"/>
-            <Button x:Name="FactsBtn"
-                    Content="Interesting facts"
-                    Margin="5, 15, 5, 5"
-                    FontSize="30"
-                    Background="DodgerBlue"
-                    Foreground="White"                    
-                    HorizontalAlignment="Stretch"
                     Height="70"/>
         </StackPanel>
     </Grid>

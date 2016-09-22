@@ -20,8 +20,12 @@ namespace Lab1.Presentation.ViewModels
             _authenticationManager = authenticationManager;
 
             ReceptionCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.Appointment));
+
+            SheduleCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.Appointment));
         }
         
         public ICommand ReceptionCommand { get; }
+
+        public ICommand SheduleCommand { get; }
     }
 }
