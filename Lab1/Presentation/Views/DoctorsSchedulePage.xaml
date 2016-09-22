@@ -10,6 +10,19 @@
 
     <Grid Background="Orange">
 
+        <Grid Background="Orange">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="4*" MinWidth="400"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*" MinHeight="400"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+        </Grid>
+
         <!-- Top command bar-->
         <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
                     CompositeMode="SourceOver" Background="DodgerBlue">
@@ -34,10 +47,10 @@
                               Command="{Binding LogOffCommand}"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
-        <StackPanel Grid.Column="1" Grid.Row="1">
+        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock HorizontalAlignment="Center"
                                Text="Clinic works:"
-                               FontSize="32"
+                               FontSize="30"
                                FontWeight="Bold"
                                Margin="5, 60, 5, 0"
                                Foreground="#FF0B1A68"
@@ -52,11 +65,21 @@
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Dentist schedule"
-                           FontSize="32"
+                           FontSize="30"
                            FontWeight="Bold"
                            Margin="5, 10, 5, 10"
                            Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
+            <TextBlock Text="Select doctor"
+                       HorizontalAlignment="Stretch"
+                       FontWeight="Bold"
+                       Margin="5, 0, 5, 0"                       
+                       FontSize="16" VerticalAlignment="Center"/>
+            <ComboBox Margin="5"
+                      HorizontalAlignment="Stretch"
+                      Background="White"
+                      ItemsSource="{Binding DoctorList}"
+                      SelectedItem="{Binding Doctor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </StackPanel>
     </Grid>
 </Page>
