@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    DataContext="{Binding DoctorSchedule, Source={StaticResource Locator}}">
+    DataContext="{Binding DoctorsSchedule, Source={StaticResource Locator}}">
 
     <Grid Background="Orange">
 
@@ -46,13 +46,11 @@
                            Text="Mon-Fri: 8:00-20:00"
                            FontSize="28"
                            Margin="5"
-                           Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Sat-Sun: 10:00-21:00"
                            FontSize="28"
                            Margin="5"
-                           Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Dentist schedule"
