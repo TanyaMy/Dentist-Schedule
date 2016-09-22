@@ -21,18 +21,28 @@
         </Grid.RowDefinitions>
 
         <!-- Top command bar-->
-        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" Background="DodgerBlue">
+        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
+                    CompositeMode="SourceOver" Background="DodgerBlue">
             <CommandBar.Content>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                     <AppBarButton x:Name="backBtn"
-                                  Icon="Back"                                    
+                                  Icon="Back" 
                                   VerticalAlignment="Stretch"                       
                                   FontSize="18"
+                                  Command="{Binding GoBackCommand}"
                                   Background="DodgerBlue"
-                                  Foreground="White"
-                                  Command="{Binding GoBackCommand}"/>
+                                  Foreground="White"/>
                 </StackPanel>
             </CommandBar.Content>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="LogOffBtn"
+                              Background="DodgerBlue"
+                              VerticalAlignment="Stretch" 
+                              HorizontalAlignment="Stretch"
+                              Foreground="White"                              
+                              Label="Log off"
+                              Command="{Binding LogOffCommand}"/>
+            </CommandBar.SecondaryCommands>
         </CommandBar>
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"                    
                     VerticalAlignment="Stretch">

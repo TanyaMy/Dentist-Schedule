@@ -22,19 +22,28 @@
         </Grid.RowDefinitions>
 
         <!-- Top command bar-->
-        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" Background="DodgerBlue">
+        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
+                    CompositeMode="SourceOver" Background="DodgerBlue">
             <CommandBar.Content>
-                <StackPanel Orientation="Horizontal" 
-                            HorizontalAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                     <AppBarButton x:Name="backBtn"
-                                  Icon="Back"                                    
+                                  Icon="Back" 
                                   VerticalAlignment="Stretch"                       
                                   FontSize="18"
+                                  Command="{Binding GoBackCommand}"
                                   Background="DodgerBlue"
-                                  Foreground="White"
-                                  Command="{Binding GoBackCommand}"/>
+                                  Foreground="White"/>
                 </StackPanel>
             </CommandBar.Content>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="LogOffBtn"
+                              Background="DodgerBlue"
+                              VerticalAlignment="Stretch" 
+                              HorizontalAlignment="Stretch"
+                              Foreground="White"                              
+                              Label="Log off"
+                               Command="{Binding LogOffCommand}"/>
+            </CommandBar.SecondaryCommands>
         </CommandBar>
         
         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
@@ -50,7 +59,7 @@
                     VerticalAlignment="Stretch">
             
             <!-- ComboBox  "Visit purpose"-->
-            <TextBlock Text="The purpose of the visit"                      
+            <TextBlock Text="*The purpose of the visit"                      
                        FontWeight="Bold"
                        Margin="5, 0, 5, 0"                      
                        FontSize="16" VerticalAlignment="Center"/>
@@ -63,7 +72,7 @@
 
 
             <!-- ComboBox  "Doctors"-->
-            <TextBlock Text="Your doctor"
+            <TextBlock Text="*Your doctor"
                        HorizontalAlignment="Stretch"
                        FontWeight="Bold"
                        Margin="5, 0, 5, 0"                       
@@ -88,11 +97,12 @@
                         Time="{Binding VisitTime, Mode=TwoWay}"
                         Background="White"
                         HorizontalAlignment="Stretch"/>
-            <TextBlock Text="Complaints"                      
+            <TextBlock Text="*Complaints"                      
                        FontWeight="Bold"
                        Margin="5, 0, 5, 0"
                        FontSize="16" VerticalAlignment="Stretch"/>
             <TextBox x:Name="complaintsTB"
+                     IsSpellCheckEnabled="False" 
                      Text="{Binding Complaints, Mode=TwoWay}"
                      FontSize="16"
                      Height="90"

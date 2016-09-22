@@ -21,11 +21,12 @@ namespace Lab1.Presentation.ViewModels
 
             ReceptionCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.Appointment));
 
-            SheduleCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.Appointment));
+            GoDoctorSchedule = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.DoctorsSchedule));
         }
         
         public ICommand ReceptionCommand { get; }
 
-        public ICommand SheduleCommand { get; }
+        public ICommand GoDoctorSchedule { get; }
+        
     }
 }

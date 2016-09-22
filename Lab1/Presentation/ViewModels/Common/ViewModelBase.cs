@@ -7,6 +7,7 @@ using System.Windows.Input;
 using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
 using GalaSoft.MvvmLight.Command;
+using Lab1.Presentation.Models;
 
 namespace Lab1.Presentation.ViewModels.Common
 {
@@ -18,12 +19,16 @@ namespace Lab1.Presentation.ViewModels.Common
             DialogService = new DialogService();
 
             GoBackCommand = new RelayCommand(NavigationService.GoBack);
+
+            LogOffCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.Login));
         }
 
         protected INavigationService NavigationService { get; }
 
         protected IDialogService DialogService { get; }
 
-        public ICommand GoBackCommand { get; }        
+        public ICommand GoBackCommand { get; }
+
+        public ICommand LogOffCommand { get; }
     }
 }

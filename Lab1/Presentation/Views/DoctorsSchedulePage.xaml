@@ -1,24 +1,14 @@
 ﻿<Page
-    x:Class="Lab1.Presentation.Views.PatientsShedulePage"
+    x:Class="Lab1.Presentation.Views.DoctorsSchedulePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Lab1.Presentation.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    DataContext="{Binding Calendar, Source={StaticResource Locator}}">
+    DataContext="{Binding DoctorsSchedule, Source={StaticResource Locator}}">
 
     <Grid Background="Orange">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="2*"/>
-        </Grid.RowDefinitions>
 
         <!-- Top command bar-->
         <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
@@ -39,27 +29,34 @@
                               Background="DodgerBlue"
                               VerticalAlignment="Stretch" 
                               HorizontalAlignment="Stretch"
-                              Foreground="White" 
-                              Command="{Binding LogOffCommand}"
-                              Label="Log off"/>
+                              Foreground="White"                              
+                              Label="Log off"
+                              Command="{Binding LogOffCommand}"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
-
-        <TextBlock Text="Shedule patients" 
-                   Grid.Row="0"
-                   Grid.Column="1"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   FontSize="42"
-                   FontStyle="Italic"/>
-
-        <CalendarView x:Name="CalendarDatePicker"
-                Grid.Column="1"
-                Grid.Row="1"
-                SelectionMode="Multiple"
-                Language="en"
-                HorizontalAlignment="Stretch"
-                IsTodayHighlighted="True">
-        </CalendarView>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBlock HorizontalAlignment="Center"
+                               Text="Clinic works:"
+                               FontSize="32"
+                               FontWeight="Bold"
+                               Margin="5, 60, 5, 0"
+                               Foreground="#FF0B1A68"
+                               FontStyle="Italic"/>
+            <TextBlock HorizontalAlignment="Center"
+                           Text="Mon-Fri: 8:00-20:00"
+                           FontSize="22"
+                           FontStyle="Italic"/>
+            <TextBlock HorizontalAlignment="Center"
+                           Text="Sat-Sun: 10:00-21:00"
+                           FontSize="22"
+                           FontStyle="Italic"/>
+            <TextBlock HorizontalAlignment="Center"
+                           Text="Dentist schedule"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Margin="5, 10, 5, 10"
+                           Foreground="#FF0B1A68"
+                           FontStyle="Italic"/>
+        </StackPanel>
     </Grid>
 </Page>

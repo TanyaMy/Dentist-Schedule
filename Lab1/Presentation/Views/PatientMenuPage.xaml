@@ -22,7 +22,8 @@
         </Grid.RowDefinitions>
 
         <!-- Top command bar-->
-        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" Background="DodgerBlue">
+        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
+                    CompositeMode="SourceOver" Background="DodgerBlue">
             <CommandBar.Content>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                     <AppBarButton x:Name="backBtn"
@@ -34,9 +35,18 @@
                                   Foreground="White"/>
                 </StackPanel>
             </CommandBar.Content>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="LogOffBtn"
+                              Background="DodgerBlue"
+                              VerticalAlignment="Stretch" 
+                              HorizontalAlignment="Stretch"
+                              Foreground="White"                              
+                              Label="Log off"
+                              Command="{Binding LogOffCommand}"/>
+            </CommandBar.SecondaryCommands>
         </CommandBar>
-        <StackPanel Grid.Row="1" Grid.Column="1" 
-                    HorizontalAlignment="Stretch"                    
+        
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"                    
                     VerticalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Center"
                            Text="Hello, Patient"
@@ -45,8 +55,8 @@
                        Margin="5, 50, 5, 50"
                            Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
-            <Button x:Name="RegistrationReceptionButton"
-                    Content="Registration to dentist reception"
+            <Button x:Name="ReceptionBtn"
+                    Content="Dentist reception"
                     Margin="5, 15 5, 5"
                     FontSize="30"
                     Background="DodgerBlue"
@@ -54,22 +64,23 @@
                     HorizontalAlignment="Stretch" 
                     Height="70"
                     Command="{Binding ReceptionCommand}"/>
-            <Button x:Name="SheduleButton"
-                    Content="Your shedule"
-                    Margin="5, 15 5, 5"
+            <Button x:Name="DentistSсheduleBtn"
+                    Content="Dentist Sсhedule"
+                    Margin="5, 15, 5, 5"
                     FontSize="30"
                     Background="DodgerBlue"
                     Foreground="White"                    
-                    HorizontalAlignment="Stretch" 
+                    HorizontalAlignment="Stretch"
+                    Command="{Binding GoDoctorSchedule}"
                     Height="70"/>
-            <Button x:Name="OffersButton"
+            <Button x:Name="OfferBtn"
                     Content="Special offers"
                     Margin="5, 15 5, 5"
                     FontSize="30"
                     Background="DodgerBlue"
                     Foreground="White"                    
                     HorizontalAlignment="Stretch" 
-                    Height="70"/>
+                    Height="70"/>         
         </StackPanel>
     </Grid>
 </Page>

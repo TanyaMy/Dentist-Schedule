@@ -108,7 +108,9 @@
     <Compile Include="Presentation\ViewModels\Common\ViewModelBase.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelLocator.cs" />
     <Compile Include="Presentation\ViewModels\DoctorMenuViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\DoctorsScheduleViewModel.cs" />
     <Compile Include="Presentation\ViewModels\LoginViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\MainViewModel.cs" />
     <Compile Include="Presentation\ViewModels\PatientMenuViewModel.cs" />
     <Compile Include="Presentation\ViewModels\PatientReviewViewModel.cs" />
     <Compile Include="Presentation\ViewModels\CalendarViewModel.cs" />
@@ -119,8 +121,14 @@
     <Compile Include="Presentation\Views\DoctorMenuPage.xaml.cs">
       <DependentUpon>DoctorMenuPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Views\DoctorsSchedulePage.xaml.cs">
+      <DependentUpon>DoctorsSchedulePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Views\PatientMenuPage.xaml.cs">
       <DependentUpon>PatientMenuPage.xaml</DependentUpon>
@@ -182,7 +190,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Presentation\Views\DoctorsSchedulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentation\Views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
