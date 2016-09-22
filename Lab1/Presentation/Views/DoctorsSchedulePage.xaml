@@ -34,6 +34,34 @@
                               Command="{Binding LogOffCommand}"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
-        
+        <StackPanel Grid.Column="1" Grid.Row="1">
+        <TextBlock HorizontalAlignment="Center"
+                           Text="Clinic works:"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Margin="5, 80, 5, 10"
+                           Foreground="#FF0B1A68"
+                           FontStyle="Italic"/>
+            <TextBlock HorizontalAlignment="Center"
+                           Text="Mon-Fri: 8:00-20:00"
+                           FontSize="28"
+                           Margin="5"
+                           Foreground="#FF0B1A68"
+                           FontStyle="Italic"/>
+            <TextBlock HorizontalAlignment="Center"
+                           Text="Sat-Sun: 10:00-21:00"
+                           FontSize="28"
+                           Margin="5"
+                           Foreground="#FF0B1A68"
+                           FontStyle="Italic"/>
+            <TextBlock HorizontalAlignment="Center"
+                           Text="Dentist schedule"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Margin="5, 20, 5, 10"
+                           Foreground="#FF0B1A68"
+                           FontStyle="Italic"/>
+        </StackPanel>
+
     </Grid>
 </Page>
