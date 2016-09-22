@@ -37,7 +37,7 @@
                        HorizontalAlignment="Center"
                        TextAlignment="Center"
                        Margin="10"
-                Text="This application will help you to use the services of highly qualified doctors and high technologies in our clinic. You can view your schedule, choose your preferred date, time and even a doctor, as well as write what bothers you. We love our patients and work for you!"/>
+                Text="This application will help you to use the services of highly qualified doctors and high technologies in our clinic. You can view dentists' schedule, choose your preferred date, time and even a doctor, as well as write what bothers you. We love our patients and work for you!"/>
             <RelativePanel Margin="50,10" VerticalAlignment="Bottom">
                 <Button RelativePanel.AlignLeftWithPanel="True"
                         x:Name="logInButton"
