@@ -90,12 +90,14 @@
             
             <DatePicker Margin="5"
                         Background="White"
+                        Language="en"
                         Date="{Binding VisitDate}"
                         HorizontalAlignment="Stretch"/>
             
             <TimePicker Margin="5"
                         Time="{Binding VisitTime, Mode=TwoWay}"
                         Background="White"
+                         Language="en"
                         HorizontalAlignment="Stretch"/>
             <TextBlock Text="*Complaints"                      
                        FontWeight="Bold"

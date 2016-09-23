@@ -78,8 +78,8 @@
                         Language="en"/>
             <TextBlock Text="*Select your e-mail and password:"
                        Margin="5, 15, 5, 5"
-                           FontSize="18" 
-                           FontWeight="Bold"/>
+                       FontSize="18" 
+                       FontWeight="Bold"/>
             <TextBox x:Name="loginTB"
                      IsSpellCheckEnabled="False" 
                      PlaceholderText="E-mail (not less than 6 symbols)"
