@@ -52,22 +52,22 @@
                                Text="Clinic works:"
                                FontSize="30"
                                FontWeight="Bold"
-                               Margin="5, 60, 5, 0"
+                               Margin="5, 50, 5, 0"
                                Foreground="#FF0B1A68"
                                FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Mon-Fri: 8:00-20:00"
-                           FontSize="22"
+                           FontSize="20"
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Sat-Sun: 10:00-21:00"
-                           FontSize="22"
+                           FontSize="20"
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Dentist schedule"
                            FontSize="30"
                            FontWeight="Bold"
-                           Margin="5, 10, 5, 10"
+                           Margin="5"
                            Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
             <TextBlock Text="Select doctor"
@@ -79,7 +79,26 @@
                       HorizontalAlignment="Stretch"
                       Background="White"
                       ItemsSource="{Binding DoctorList}"
-                      SelectedItem="{Binding Doctor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                      SelectedItem="{Binding Doctor, Mode=TwoWay,
+                      UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock MinHeight="50"
+                       HorizontalAlignment="Stretch"
+                       FontWeight="Bold"
+                       MaxWidth="300"
+                       TextAlignment="Center"
+                       TextWrapping="WrapWholeWords"
+                       Text="{Binding Schedule, Mode=TwoWay}"
+                       Margin="5, 0, 5, 0"                       
+                       FontSize="16" VerticalAlignment="Center"/>
+            <CalendarView x:Name="CalendarDatePicker"
+                          Language="en"
+                          Margin="15" 
+                          Height="Auto"
+                          VerticalAlignment="Bottom"
+                          HorizontalAlignment="Stretch"
+                          IsTodayHighlighted="True">
+            </CalendarView>
         </StackPanel>
+       
     </Grid>
 </Page>
