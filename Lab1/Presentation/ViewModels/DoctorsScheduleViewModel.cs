@@ -18,8 +18,8 @@ namespace Lab1.Presentation.ViewModels
         {
             _authenticationManager = authenticationManager;
 
-            _doctorList = new List<string> {"Andreev B", "Petrova S",
-            "Semenov Р", "Sidorov A", "Smith J"};
+            _doctorList = new List<string> {"Andreev B - Consultation", "Petrova S - Cosmetology",
+            "Semenov Р - Filling", "Sidorov A - Сhildren's dentistry", "Smith J - Surgery"};
         }
 
         public List<string> DoctorList

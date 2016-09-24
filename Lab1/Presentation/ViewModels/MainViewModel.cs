@@ -16,11 +16,15 @@ namespace Lab1.Presentation.ViewModels
 
             RegistrationCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.Registration));
 
+            LookScheduleCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.DoctorsSchedule));
+
             LogInCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.Login));
         }
 
         public ICommand RegistrationCommand { get; }
 
         public ICommand LogInCommand { get; }
+
+        public ICommand LookScheduleCommand { get; }
     }
 }

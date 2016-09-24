@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="5*" MinHeight="400"/>
+            <RowDefinition Height="7*" MinHeight="400"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -85,16 +85,47 @@
                        Margin="5, 15, 5, 0"
                        FontWeight="Bold"
                        FontSize="16" VerticalAlignment="Center"/>
-            
-            <DatePicker Margin="5"
-                        Background="White"
-                        Date="{Binding VisitDate}"
-                        HorizontalAlignment="Stretch"/>
-            
-            <TimePicker Margin="5"
+            <StackPanel HorizontalAlignment="Stretch" Margin="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border BorderThickness="1" BorderBrush="Black">
+                        <Image Source="ms-appx:///Assets/Images/schedule.png" 
+                           Grid.Column="0" Grid.Row="0"
+                           MaxHeight="30"
+                           Stretch="Uniform"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Stretch"/>
+                    </Border>
+                    <Button x:Name="ReceptionBtn"
+                            BorderThickness="1"
+                            BorderBrush="Black"
+                            Grid.Column="1" Grid.Row="0"                            
+                            Content="Look a schedule"
+                            FontSize="20"
+                            Background="DodgerBlue"
+                            Foreground="White"   
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Command="{Binding LookScheduleCommand}"/>
+                </Grid>
+            </StackPanel>
+            <CalendarDatePicker Margin="5, 0, 5, 5"
+                     HorizontalAlignment="Stretch"
+                     PlaceholderText="Select a date"
+                     Language="en"
+                     Background="White"/>
+            <TimePicker Margin="5, 0, 5, 5"
                         Time="{Binding VisitTime, Mode=TwoWay}"
                         Background="White"                        
-                        HorizontalAlignment="Stretch" ClockIdentifier="24HourClock"/>
+                        HorizontalAlignment="Stretch" 
+                        ClockIdentifier="24HourClock"/>
             <TextBlock Text="*Complaints"                      
                        FontWeight="Bold"
                        Margin="5, 0, 5, 0"
@@ -110,7 +141,7 @@
                      Background="White"/>
             <Button x:Name="ReadyBtn"
                     Content="Confirm"
-                    Margin="5, 20, 5, 5" 
+                    Margin="5, 25, 5, 5" 
                     FontSize="25"
                     Background="DodgerBlue"
                     Foreground="White"                    

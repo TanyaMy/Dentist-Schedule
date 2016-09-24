@@ -24,31 +24,33 @@
         </Grid>
 
         <!-- Top command bar-->
-        <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
-                    CompositeMode="SourceOver" Background="DodgerBlue">
-            <CommandBar.Content>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <AppBarButton x:Name="backBtn"
-                                  Icon="Back" 
-                                  VerticalAlignment="Stretch"                       
-                                  FontSize="18"
-                                  Command="{Binding GoBackCommand}"
+        <StackPanel>
+            <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
+                        CompositeMode="SourceOver" Background="DodgerBlue">
+                <CommandBar.Content>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <AppBarButton x:Name="backBtn"
+                                      Icon="Back" 
+                                      VerticalAlignment="Stretch"                       
+                                      FontSize="18"
+                                      Command="{Binding GoBackCommand}"
+                                      Background="DodgerBlue"
+                                      Foreground="White"/>
+                    </StackPanel>
+                </CommandBar.Content>
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton x:Name="LogOffBtn"
                                   Background="DodgerBlue"
-                                  Foreground="White"/>
-                </StackPanel>
-            </CommandBar.Content>
-            <CommandBar.SecondaryCommands>
-                <AppBarButton x:Name="LogOffBtn"
-                              Background="DodgerBlue"
-                              VerticalAlignment="Stretch" 
-                              HorizontalAlignment="Stretch"
-                              Foreground="White"                              
-                              Label="Log off"
-                              Command="{Binding LogOffCommand}"/>
-            </CommandBar.SecondaryCommands>
-        </CommandBar>
+                                  VerticalAlignment="Stretch" 
+                                  HorizontalAlignment="Stretch"
+                                  Foreground="White"                              
+                                  Label="Log off"
+                                  Command="{Binding LogOffCommand}"/>
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
+            
+        </StackPanel>
 
-     
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock HorizontalAlignment="Center"
                                Text="Strong Dent works:"
