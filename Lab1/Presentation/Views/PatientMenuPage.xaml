@@ -72,7 +72,7 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                
+                    
                     <Image Source="ms-appx:///Assets/Images/reception1.png" 
                            Grid.Column="0" Grid.Row="0"
                            MaxHeight="80"
@@ -82,14 +82,14 @@
                            HorizontalAlignment="Stretch"/>
                     <Button x:Name="ReceptionBtn"
                             Grid.Column="1" Grid.Row="0"
-                        Content="Dentist reception"
-                        Margin="5, 15 5, 5"
-                        FontSize="30"
-                        Background="DodgerBlue"
-                        Foreground="White"                    
-                        HorizontalAlignment="Stretch"
-                        Height="80"
-                        Command="{Binding ReceptionCommand}"/>
+                            Content="Dentist reception"
+                            Margin="5, 15 5, 5"
+                            FontSize="30"
+                            Background="DodgerBlue"
+                            Foreground="White"                    
+                            HorizontalAlignment="Stretch"
+                            Height="80"
+                            Command="{Binding ReceptionCommand}"/>
                     <Image Source="ms-appx:///Assets/Images/schedule.png" 
                            Margin="10"
                            MaxHeight="80"

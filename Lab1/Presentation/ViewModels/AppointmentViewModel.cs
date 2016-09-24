@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using Lab1.Domain.Managers;
+using Lab1.Presentation.Models;
 using Lab1.Presentation.ViewModels.Common;
 using System;
 using System.Collections.Generic;
@@ -32,10 +33,14 @@ namespace Lab1.Presentation.ViewModels
             _doctorList = new List<string> { "No", "Andreev B - Consultation", "Petrova S - Cosmetology",
             "Semenov Р - Filling", "Sidorov A - Сhildren's dentistry", "Smith J - Surgery"};
 
-            SubmitCommand = new RelayCommand(Submit);                  
+            SubmitCommand = new RelayCommand(Submit);
+
+            LookScheduleCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.DoctorsSchedule));
         }
        
         public ICommand SubmitCommand { get; }
+
+        public ICommand LookScheduleCommand { get; }
 
         public List<string> PurposeList
         {
