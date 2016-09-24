@@ -148,5 +148,13 @@
                     HorizontalAlignment="Stretch"
                     Command="{Binding SubmitCommand}"/>
         </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left">
+            <Image Source="ms-appx:///Assets/Images/reception.png"               
+                   Stretch="Uniform"
+                   MaxHeight="300"
+                   MaxWidth="300"/>
+        </StackPanel>
     </Grid>
 </Page>
