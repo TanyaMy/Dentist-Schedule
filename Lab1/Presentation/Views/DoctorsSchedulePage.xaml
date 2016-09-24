@@ -89,6 +89,6 @@
                       Background="White"
                       ItemsSource="{Binding DoctorList}"
                       SelectedItem="{Binding Doctor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        </StackPanel>
+        </StackPanel>    
     </Grid>
 </Page>
