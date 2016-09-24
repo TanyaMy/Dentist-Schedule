@@ -107,19 +107,13 @@
     <Compile Include="Presentation\ViewModels\Common\Extensions.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelBase.cs" />
     <Compile Include="Presentation\ViewModels\Common\ViewModelLocator.cs" />
-    <Compile Include="Presentation\ViewModels\DoctorMenuViewModel.cs" />
     <Compile Include="Presentation\ViewModels\DoctorsScheduleViewModel.cs" />
     <Compile Include="Presentation\ViewModels\LoginViewModel.cs" />
     <Compile Include="Presentation\ViewModels\MainViewModel.cs" />
     <Compile Include="Presentation\ViewModels\PatientMenuViewModel.cs" />
-    <Compile Include="Presentation\ViewModels\PatientReviewViewModel.cs" />
-    <Compile Include="Presentation\ViewModels\CalendarViewModel.cs" />
     <Compile Include="Presentation\ViewModels\RegistrationViewModel.cs" />
     <Compile Include="Presentation\Views\AppointmentPage.xaml.cs">
       <DependentUpon>AppointmentPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\Views\DoctorMenuPage.xaml.cs">
-      <DependentUpon>DoctorMenuPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Views\DoctorsSchedulePage.xaml.cs">
       <DependentUpon>DoctorsSchedulePage.xaml</DependentUpon>
@@ -133,12 +127,6 @@
     <Compile Include="Presentation\Views\PatientMenuPage.xaml.cs">
       <DependentUpon>PatientMenuPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Views\PatientReviewPage.xaml.cs">
-      <DependentUpon>PatientReviewPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\Views\PatientsShedulePage.xaml.cs">
-      <DependentUpon>PatientsShedulePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Presentation\Views\RegistrationPage.xaml.cs">
       <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
@@ -151,9 +139,15 @@
     <None Include="Lab1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\authorization.png" />
     <Content Include="Assets\Images\brush.png" />
     <Content Include="Assets\Images\doktor.png" />
     <Content Include="Assets\Images\factsback.jpg" />
+    <Content Include="Assets\Images\reception.png" />
+    <Content Include="Assets\Images\reception1.png" />
+    <Content Include="Assets\Images\registration.png" />
+    <Content Include="Assets\Images\schedule.png" />
+    <Content Include="Assets\Images\special-offer.png" />
     <Content Include="Assets\Images\teeth.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -183,10 +177,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\Views\DoctorMenuPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Presentation\Views\DoctorsSchedulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -200,14 +190,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Presentation\Views\PatientMenuPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Presentation\Views\PatientReviewPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Presentation\Views\PatientsShedulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

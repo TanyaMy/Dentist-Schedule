@@ -45,11 +45,17 @@
         </CommandBar>
 
         <StackPanel Grid.Column="1" Grid.Row="1">
-            <Image Source="ms-appx:///Assets/Images/teeth.png" 
+            <TextBlock HorizontalAlignment="Center"
+                           Text="Authorisation"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           Foreground="#FF0B1A68"
+                           FontStyle="Italic"/>
+            <Image Source="ms-appx:///Assets/Images/authorization.png" 
                    Stretch="Uniform"
-                   MaxHeight="125"
+                   MaxHeight="150"
                    Margin="25"/>
-            <TextBlock Text="E-Mail" FontSize="22"/>
+            <TextBlock Text="Phone or e-mail" FontSize="22"/>
             <TextBox x:Name="EmailTextBox"
                 IsSpellCheckEnabled="False" 
                 Text="{Binding Email, Mode=TwoWay}"
@@ -57,7 +63,8 @@
                 Background="White"
                 FontSize="26"/>
 
-            <TextBlock Text="Password" FontSize="22" Margin="0,10,0,0"/>
+            <TextBlock Text="Password" FontSize="22"
+                       Margin="0,5,0,0"/>
             <PasswordBox x:Name="PasswordBox"
                 Password="{Binding Password, Mode=TwoWay}"
                 HorizontalAlignment="Stretch"
@@ -73,7 +80,7 @@
                     Foreground="White" 
                     Command="{Binding SubmitCommand}"/>
 
-            <RelativePanel Margin="45,10">
+            <RelativePanel Margin="45,5">
                 <Button RelativePanel.AlignLeftWithPanel="True"
                         Content="Forgot password?"
                         Padding="10"

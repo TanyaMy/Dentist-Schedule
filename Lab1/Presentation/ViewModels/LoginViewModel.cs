@@ -63,19 +63,7 @@ namespace Lab1.Presentation.ViewModels
 
             string message = "";
 
-            if (Email.Equals(DoctorEmail, StringComparison.OrdinalIgnoreCase))
-            {
-                if (Password == DoctorPassword)
-                {
-                    message = "Hello, Doctor! You are logged in!";
-                    NavigationService.NavigateTo(PageKeys.DoctorMenu);
-                }
-                else
-                {
-                    message = "Hello, Doctor! Your password is wrong!";
-                }
-            }
-            else if (Email.Equals(PatientEmail, StringComparison.OrdinalIgnoreCase))
+            if (Email.Equals(PatientEmail, StringComparison.OrdinalIgnoreCase))
             {
                 if (Password == PatientPassword)
                 {

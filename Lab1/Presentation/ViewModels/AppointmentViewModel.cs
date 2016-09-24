@@ -29,8 +29,8 @@ namespace Lab1.Presentation.ViewModels
             _purposeList = new List<string> { "Consultation", "Cosmetology", "Filling",
             "Сhildren's dentistry", "Surgery", "Other"};
 
-            _doctorList = new List<string> { "No", "Andreev B", "Petrova S",
-            "Semenov Р", "Sidorov A", "Smith J"};
+            _doctorList = new List<string> { "No", "Andreev B - Consultation", "Petrova S - Cosmetology",
+            "Semenov Р - Filling", "Sidorov A - Сhildren's dentistry", "Smith J - Surgery"};
 
             SubmitCommand = new RelayCommand(Submit);                  
         }

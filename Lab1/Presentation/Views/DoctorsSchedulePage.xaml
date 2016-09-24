@@ -47,9 +47,11 @@
                               Command="{Binding LogOffCommand}"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
+
+     
         <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock HorizontalAlignment="Center"
-                               Text="Clinic works:"
+                               Text="Strong Dent works:"
                                FontSize="30"
                                FontWeight="Bold"
                                Margin="5, 60, 5, 0"
@@ -61,6 +63,11 @@
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Sat-Sun: 10:00-21:00"
+                           FontSize="22"
+                           FontStyle="Italic"/>
+            <TextBlock HorizontalAlignment="Center"
+                           Text="Our phone: 095-786-12-45"
+                           FontWeight="Bold"
                            FontSize="22"
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
