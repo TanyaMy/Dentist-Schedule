@@ -25,6 +25,12 @@ namespace Lab1.Presentation.Views
         public LoginPage()
         {
             this.InitializeComponent();
-        }        
+            this.Loaded += BasicPage_Loaded;
+        }
+
+        private void BasicPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            EmailTextBox.Focus(FocusState.Programmatic);
+        }
     }
 }

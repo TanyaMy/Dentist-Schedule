@@ -10,14 +10,14 @@
 
     <Grid Background="Orange">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="3*" MinWidth="400"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="7*" MinHeight="400"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition/>
+            <RowDefinition Height="13*" MinHeight="400"/>
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <!-- Top command bar-->
@@ -44,9 +44,9 @@
                                Command="{Binding LogOffCommand}"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
-        
-        
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
+
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Center"
                            Text="Dentist reception"
@@ -54,38 +54,50 @@
                            FontWeight="Bold"
                            Foreground="#FF0B1A68"
                            FontStyle="Italic"
-                           Margin="5, 0, 5, 15"/>
-            
-            <!-- ComboBox  "Visit purpose"-->
-            <TextBlock Text="*The purpose of the visit"                      
-                       FontWeight="Bold"
-                       Margin="5, 0, 5, 0"                      
-                       FontSize="16" VerticalAlignment="Center"/>
-            <ComboBox Margin="5" 
-                      HorizontalAlignment="Stretch"
-                      VerticalAlignment="Stretch"
-                      ItemsSource="{Binding PurposeList, Mode=TwoWay}"
-                      SelectedItem="{Binding Purpose, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                      Background="White"/>
+                           Margin="5, 5, 5, 12"/>
 
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>                   
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>                   
+                </Grid.RowDefinitions>
+                
+                
+                <StackPanel Grid.Column="0">
+                    <!-- ComboBox  "Visit purpose"-->
+                    <TextBlock Text="*The purpose of the visit"                      
+                           FontWeight="Bold"
+                           Margin="5, 0, 5, 0"                      
+                           FontSize="16" VerticalAlignment="Center"/>
+                    <ComboBox Margin="5, 0, 5, 5" 
+                          x:Name="PurposeCB"
+                          SelectionChanged="{x:Bind ComboBox_SelectionChanged }"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch"
+                          ItemsSource="{Binding PurposeList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                          SelectedItem="{Binding Purpose, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          Background="White"/>
+                </StackPanel>
 
-            <!-- ComboBox  "Doctors"-->
-            <TextBlock Text="*Your doctor"
+                <StackPanel Grid.Column="1">
+                    <!-- ComboBox  "Doctors"-->
+                    <TextBlock Text="*Your doctor"                       
                        HorizontalAlignment="Stretch"
                        FontWeight="Bold"
                        Margin="5, 0, 5, 0"                       
                        FontSize="16" VerticalAlignment="Center"/>
-            <ComboBox Margin="5"
+                    <ComboBox Margin="5, 0, 5, 5"
+                      x:Name="DoctorsCB"
                       HorizontalAlignment="Stretch"
                       Background="White"
-                      ItemsSource="{Binding DoctorList}"
-                      SelectedItem="{Binding Doctor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>            
-            <TextBlock Text="More convenient for your visit date and time"
-                       HorizontalAlignment="Stretch"
-                       Margin="5, 15, 5, 0"
-                       FontWeight="Bold"
-                       FontSize="16" VerticalAlignment="Center"/>
-            <StackPanel HorizontalAlignment="Stretch" Margin="5">
+                      ItemsSource="{Binding DoctorList, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                      SelectedItem="{Binding Doctor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+            </Grid>
+            <StackPanel HorizontalAlignment="Stretch" Margin="5, 5, 5, 3">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -108,7 +120,7 @@
                             BorderBrush="Black"
                             Grid.Column="1" Grid.Row="0"                            
                             Content="Look a schedule"
-                            FontSize="20"
+                            FontSize="18"
                             Background="DodgerBlue"
                             Foreground="White"   
                             HorizontalAlignment="Stretch"
@@ -116,32 +128,47 @@
                             Command="{Binding LookScheduleCommand}"/>
                 </Grid>
             </StackPanel>
-            <CalendarDatePicker Margin="5, 0, 5, 5"
-                     HorizontalAlignment="Stretch"
-                     PlaceholderText="Select a date"
-                     Language="en"
-                     Background="White"/>
-            <TimePicker Margin="5, 0, 5, 5"
-                        Time="{Binding VisitTime, Mode=TwoWay}"
-                        Background="White"                        
-                        HorizontalAlignment="Stretch" 
-                        ClockIdentifier="24HourClock"/>
+            <TextBlock Text="Choose vacant and convenient for you time"                      
+                       FontWeight="Bold"
+                       Margin="5, 10, 5, 0"
+                       FontSize="16" VerticalAlignment="Stretch"/>
+            <Border Margin="10, 5, 10, 5"
+                    BorderThickness="5"
+                    BorderBrush="#FF030364">
+                <Grid Height="200" HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch">
+                    <Grid.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Images/VacantTime.png"/>
+                    </Grid.Background>
+                    <Button x:Name="chooseBtn"
+                            Margin="110,92,0,63" Height="45" 
+                            Width="60"
+                            FontFamily="Segoe MDL2 Assets"
+                            Content=""
+                            FontSize="35"
+                            Foreground="#FF000968"                           
+                            Background="Transparent" 
+                            Click="chooseBtn_Click"
+                            FontWeight="ExtraBold"/>
+                </Grid>
+
+            </Border>
             <TextBlock Text="*Complaints"                      
                        FontWeight="Bold"
-                       Margin="5, 0, 5, 0"
+                       Margin="5, 5, 5, 0"
                        FontSize="16" VerticalAlignment="Stretch"/>
             <TextBox x:Name="complaintsTB"
                      IsSpellCheckEnabled="False" 
                      Text="{Binding Complaints, Mode=TwoWay}"
-                     FontSize="16"
-                     Height="90"
+                     FontSize="15"
+                     Height="85"
                      TextWrapping="Wrap"
-                     Margin="5"
+                     Margin="5, 0, 5, 5"
                      HorizontalAlignment="Stretch"
                      Background="White"/>
             <Button x:Name="ReadyBtn"
                     Content="Confirm"
-                    Margin="5, 25, 5, 5" 
+                    Margin="5, 30, 5, 5" 
                     FontSize="25"
                     Background="DodgerBlue"
                     Foreground="White"                    

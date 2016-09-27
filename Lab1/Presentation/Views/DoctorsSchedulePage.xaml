@@ -10,10 +10,10 @@
 
     <Grid Background="Orange">
 
-        <Grid Background="Orange">
+        <Grid Background="Orange" Margin="10,10,-10,-10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="4*" MinWidth="400"/>
+                <ColumnDefinition Width="4" MinWidth="400"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -24,90 +24,85 @@
         </Grid>
 
         <!-- Top command bar-->
-        <StackPanel>
-            <CommandBar Grid.Row="0" Grid.ColumnSpan="3" 
+        <CommandBar Grid.Row="0" 
                         CompositeMode="SourceOver" Background="DodgerBlue">
-                <CommandBar.Content>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                        <AppBarButton x:Name="backBtn"
+            <CommandBar.Content>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <AppBarButton x:Name="backBtn"
                                       Icon="Back" 
                                       VerticalAlignment="Stretch"                       
                                       FontSize="18"
                                       Command="{Binding GoBackCommand}"
                                       Background="DodgerBlue"
                                       Foreground="White"/>
-                    </StackPanel>
-                </CommandBar.Content>
-                <CommandBar.SecondaryCommands>
-                    <AppBarButton x:Name="LogOffBtn"
+                </StackPanel>
+            </CommandBar.Content>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="LogOffBtn"
                                   Background="DodgerBlue"
                                   VerticalAlignment="Stretch" 
                                   HorizontalAlignment="Stretch"
                                   Foreground="White"                              
                                   Label="Log off"
                                   Command="{Binding LogOffCommand}"/>
-                </CommandBar.SecondaryCommands>
-            </CommandBar>
-            
-        </StackPanel>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
 
-        <StackPanel Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Stretch" Width="400">
             <TextBlock HorizontalAlignment="Center"
                                Text="Strong Dent works:"
-                               FontSize="30"
+                               FontSize="32"
                                FontWeight="Bold"
-                               Margin="5, 50, 5, 0"
+                               Margin="5, 80, 5, 0"
                                Foreground="#FF0B1A68"
                                FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Mon-Fri: 8:00-20:00"
-                           FontSize="20"
+                           FontSize="22"
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Sat-Sun: 10:00-21:00"
-                           FontSize="20"
+                           FontSize="22"
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Our phone: 095-786-12-45"
                            FontWeight="Bold"
-                           FontSize="22"
+                           FontSize="24"
                            FontStyle="Italic"/>
             <TextBlock HorizontalAlignment="Center"
                            Text="Dentist schedule"
-                           FontSize="30"
+                           FontSize="32"
                            FontWeight="Bold"
-                           Margin="5"
+                           Margin="5, 50, 5, 10"
                            Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
-            <TextBlock Text="Select doctor"
+            <TextBlock Text="Select a doctor"
                        HorizontalAlignment="Stretch"
                        FontWeight="Bold"
                        Margin="5, 0, 5, 0"                       
-                       FontSize="16" VerticalAlignment="Center"/>
+                       FontSize="20" VerticalAlignment="Center"/>
             <ComboBox Margin="5"
+                      x:Name="DoctorsCB"
+                      FontSize="20"
+                      SelectionChanged="{x:Bind ComboBox_SelectionChanged }"
                       HorizontalAlignment="Stretch"
                       Background="White"
                       ItemsSource="{Binding DoctorList}"
                       SelectedItem="{Binding Doctor, Mode=TwoWay,
                       UpdateSourceTrigger=PropertyChanged}"/>
-            <TextBlock MinHeight="50"
+            <TextBlock x:Name="ScheduleTB"
                        HorizontalAlignment="Stretch"
-                       FontWeight="Bold"
-                       MaxWidth="300"
                        TextAlignment="Center"
                        TextWrapping="WrapWholeWords"
-                       Text="{Binding Schedule, Mode=TwoWay}"
-                       Margin="5, 0, 5, 0"                       
-                       FontSize="16" VerticalAlignment="Center"/>
-            <CalendarView x:Name="CalendarDatePicker"
-                          Language="en"
-                          Margin="15" 
-                          Height="Auto"
-                          VerticalAlignment="Bottom"
-                          HorizontalAlignment="Stretch"
-                          IsTodayHighlighted="True">
-            </CalendarView>
+                       FontFamily="Segoe WP Black"
+                       Text="{Binding Schedule, Mode=TwoWay,
+                       UpdateSourceTrigger=PropertyChanged}"
+                       LineHeight="50"
+                       Margin="5, 20, 5, 0" 
+                       FontStyle="Italic"
+                       FontSize="30" VerticalAlignment="Center" FontWeight="Bold"/>
         </StackPanel>
-       
+
     </Grid>
 </Page>
