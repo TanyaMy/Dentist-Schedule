@@ -96,9 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Domain\Managers\Concrete\AuthenticationManager.cs" />
-    <Compile Include="Domain\Managers\Concrete\PatientsManager.cs" />
     <Compile Include="Domain\Managers\IAuthenticationManager.cs" />
-    <Compile Include="Domain\Managers\IPatientsManager.cs" />
     <Compile Include="Presentation\Helpers\NavigationServiceHelper.cs" />
     <Compile Include="Presentation\Models\PageKeys.cs" />
     <Compile Include="Presentation\ViewModels\AppointmentViewModel.cs" />

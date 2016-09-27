@@ -98,7 +98,6 @@ namespace Lab1
             SimpleIoc.Default.Register(() => NavigationServiceHepler.GetService);
 
             SimpleIoc.Default.Register<IAuthenticationManager, AuthenticationManager>();
-            SimpleIoc.Default.Register<IPatientsManager, PatientsManager>();
             
 
             SimpleIoc.Default.Register<LoginViewModel>();
