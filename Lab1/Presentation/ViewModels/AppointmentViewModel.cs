@@ -89,20 +89,7 @@ namespace Lab1.Presentation.ViewModels
         {
             get { return _complaints; }
             set { Set(() => Complaints, ref _complaints, value); }
-        }
-
-        public string ChooseBtnContent
-        {
-            get
-            {
-                if (_chooseBtnContent == Char.ConvertFromUtf32(0xE73E))
-                    _chooseBtnContent = "";
-                else
-                    _chooseBtnContent = Char.ConvertFromUtf32(0xE73E);
-                return _chooseBtnContent;
-            }
-            set { Set(() => ChooseBtnContent, ref _chooseBtnContent, value); }
-        }
+        }       
 
         private void Submit()
         {

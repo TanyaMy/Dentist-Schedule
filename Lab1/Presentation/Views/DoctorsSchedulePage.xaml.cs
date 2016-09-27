@@ -29,7 +29,6 @@ namespace Lab1.Presentation.Views
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
             if (DoctorsCB.SelectedItem.ToString() == "Andreev B - Consultation")
                 ScheduleTB.Text = "Mon-Wed: 10-14, 16-19" + "\n" +
                     "Fri: 12-20" + "\n" + "Sun:12-18";
