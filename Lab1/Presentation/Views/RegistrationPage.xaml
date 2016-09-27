@@ -99,7 +99,7 @@
                        FontWeight="Bold"/>
             <TextBox x:Name="loginTB"
                      IsSpellCheckEnabled="False" 
-                     PlaceholderText="Phjne/E-mail (not less than 6 symbols)"
+                     PlaceholderText="Phone/E-mail (not less than 6 symbols)"
                      Text="{Binding Login, Mode=TwoWay}"
                      Background="White"
                      FontSize="14"

@@ -56,7 +56,7 @@
                    MaxHeight="150"
                    Margin="25"/>
             <TextBlock Text="Phone or e-mail" FontSize="22"/>
-            <TextBox x:Name="EmailTextBox"
+            <TextBox x:Name="EmailTextBox" 
                 IsSpellCheckEnabled="False" 
                 Text="{Binding Email, Mode=TwoWay}"
                 HorizontalAlignment="Stretch" 

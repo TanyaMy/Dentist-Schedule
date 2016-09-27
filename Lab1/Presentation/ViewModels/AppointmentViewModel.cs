@@ -4,9 +4,6 @@ using Lab1.Presentation.Models;
 using Lab1.Presentation.ViewModels.Common;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace Lab1.Presentation.ViewModels
@@ -22,6 +19,7 @@ namespace Lab1.Presentation.ViewModels
         private DateTime _visitDate;
         private DateTime _visitTime;
         private string _complaints;
+        private string _chooseBtnContent;
 
         public AppointmentViewModel(IAuthenticationManager authenticationManager)
         {
@@ -30,14 +28,20 @@ namespace Lab1.Presentation.ViewModels
             _purposeList = new List<string> { "Consultation", "Cosmetology", "Filling",
             "Сhildren's dentistry", "Surgery", "Other"};
 
-            _doctorList = new List<string> { "No", "Andreev B - Consultation", "Petrova S - Cosmetology",
-            "Semenov Р - Filling", "Sidorov A - Сhildren's dentistry", "Smith J - Surgery"};
+            _purpose = "Consultation";
+
+            _doctor = "No";
+
+            _chooseBtnContent = Char.ConvertFromUtf32(0xE73E);
+
+            _doctorList = new List<string> { "No", "Andreev B", "Petrova S",
+            "Semenov Р", "Sidorov A", "Smith J"};
 
             SubmitCommand = new RelayCommand(Submit);
 
             LookScheduleCommand = new RelayCommand(() => NavigationService.NavigateTo(PageKeys.DoctorsSchedule));
         }
-       
+
         public ICommand SubmitCommand { get; }
 
         public ICommand LookScheduleCommand { get; }
@@ -50,13 +54,16 @@ namespace Lab1.Presentation.ViewModels
 
         public string Purpose
         {
-            get { return _purpose; }
+            get { return _purpose;  }
             set { Set(() => Purpose, ref _purpose, value); }
         }
 
         public List<string> DoctorList
         {
-            get { return _doctorList; }
+            get
+            {
+                return _doctorList;
+            }
             set { Set(() => DoctorList, ref _doctorList, value); }
         }
 
@@ -84,6 +91,19 @@ namespace Lab1.Presentation.ViewModels
             set { Set(() => Complaints, ref _complaints, value); }
         }
 
+        public string ChooseBtnContent
+        {
+            get
+            {
+                if (_chooseBtnContent == Char.ConvertFromUtf32(0xE73E))
+                    _chooseBtnContent = "";
+                else
+                    _chooseBtnContent = Char.ConvertFromUtf32(0xE73E);
+                return _chooseBtnContent;
+            }
+            set { Set(() => ChooseBtnContent, ref _chooseBtnContent, value); }
+        }
+
         private void Submit()
         {
             try
@@ -96,20 +116,30 @@ namespace Lab1.Presentation.ViewModels
                 DialogService.ShowMessage(ex.Message, "Error");
                 return;
             }
-            
-            DialogService.ShowMessage("Thanks! We are waiting for you!", "Appointment");
+
+            string confirm = "Dear Patient, thanks for your registration!"
+                + "\n" + "The number of your request is 46512." + "\n" +
+                "We are waiting for you on Monday, 11.10.16 at 8:30."
+               + "\n" + "Your doctor is ";
+            string doctor;
+            if (_doctor == "No")
+                doctor = "Ivanov I";
+            else doctor = _doctor;
+            confirm += doctor + ".";
+
+            DialogService.ShowMessage(confirm, "Appointment");
         }
 
         private void CheckFields()
         {
-            if ((string.IsNullOrEmpty(_complaints)) 
+            if ((string.IsNullOrEmpty(_complaints))
                    || (!_purposeList.Contains(_purpose))
                    || (!_doctorList.Contains(_doctor)))
             {
                 throw new Exception("You have to fill required fields!");
             }
-        }      
-        
+        }
+       
     }
 }
 

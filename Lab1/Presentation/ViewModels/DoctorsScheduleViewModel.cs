@@ -13,13 +13,16 @@ namespace Lab1.Presentation.ViewModels
 
         private List<string> _doctorList;
         private string _doctor;
+        private string _schedule;
 
         public DoctorsScheduleViewModel(IAuthenticationManager authenticationManager)
         {
             _authenticationManager = authenticationManager;
 
-            _doctorList = new List<string> {"Andreev B - Consultation", "Petrova S - Cosmetology",
-            "Semenov Р - Filling", "Sidorov A - Сhildren's dentistry", "Smith J - Surgery"};
+            _doctorList = new List<string> {"Andreev B - Consultation", "Petrova S - Consultation",
+            "Semenov Р - Cosmetology", "Sidorov A - Cosmetology", "Smith J - Filling",
+            "Alexin B - Filling", "Braun S - Сhildren's dentistry", "Sokolova Р - Сhildren's dentistry",
+            "Red A - Surgery", "Sen J - Surgery"};
         }
 
         public List<string> DoctorList
@@ -32,6 +35,15 @@ namespace Lab1.Presentation.ViewModels
         {
             get { return _doctor; }
             set { Set(() => Doctor, ref _doctor, value); }
+        }
+
+        public string Schedule
+        {
+            get
+            {
+                return _schedule;
+            }
+            set { Set(() => Schedule, ref _schedule, value); }
         }
     }
 }
