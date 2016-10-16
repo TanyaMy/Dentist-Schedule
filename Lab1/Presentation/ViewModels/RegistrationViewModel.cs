@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI;
 using Windows.UI.Xaml.Automation;
 using GalaSoft.MvvmLight.Command;
 using Lab1.Domain.Managers;
@@ -26,6 +27,9 @@ namespace Lab1.Presentation.ViewModels
         private string _password;
         private string _confirmPassword;
 
+        private bool _isErrorMessageVisible;
+        private string _errorMessage;
+
         public RegistrationViewModel(IAuthenticationManager authenticationManager)
         {
             _authenticationManager = authenticationManager;
@@ -38,7 +42,10 @@ namespace Lab1.Presentation.ViewModels
         public string Name
         {
             get { return _name; }
-            set { Set(() => Name, ref _name, value); }
+            set
+            {
+                Set(() => Name, ref _name, value);
+            }
         }
 
         public string Surname
@@ -83,15 +90,29 @@ namespace Lab1.Presentation.ViewModels
             set { Set(() => ConfirmPassword, ref _confirmPassword, value); }
         }
 
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            set { Set(() => ErrorMessage, ref _errorMessage, value); }
+        }
+
+        public bool ErrorMessageVisibility
+        {
+            get { return _isErrorMessageVisible; }
+            set { Set(() => ErrorMessageVisibility, ref _isErrorMessageVisible, value); }
+        }
+
         private void Register()
         {
+            HideErrorMessage();
+
             try
             {
                 CheckFields();
             }
             catch (Exception ex)
             {
-                DialogService.ShowError(ex, "Registration", "OK", null);
+                HandleError(ex);
                 return;
             }
 
@@ -100,6 +121,20 @@ namespace Lab1.Presentation.ViewModels
 
             DialogService.ShowMessageBox("Registration is successful", "Registration");
             NavigationService.NavigateTo(PageKeys.PatientMenu);
+        }
+
+        private void HideErrorMessage()
+        {
+            ErrorMessageVisibility = false;
+
+            ErrorMessage = string.Empty;
+        }
+
+        private void HandleError(Exception ex)
+        {
+            ErrorMessage = ex.Message;
+
+            ErrorMessageVisibility = true;
         }
 
         private void CheckFields()
