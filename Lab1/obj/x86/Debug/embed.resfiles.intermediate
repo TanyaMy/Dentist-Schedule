@@ -2,7 +2,9 @@ App.xbf
 Presentation\Resources\Colors.xbf
 Presentation\Views\AppointmentPage.xbf
 Presentation\Views\DoctorMenuPage.xbf
+Presentation\Views\DoctorsSchedulePage.xbf
 Presentation\Views\LoginPage.xbf
+Presentation\Views\MainPage.xbf
 Presentation\Views\PatientMenuPage.xbf
 Presentation\Views\PatientReviewPage.xbf
 Presentation\Views\PatientsShedulePage.xbf
