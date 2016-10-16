@@ -18,12 +18,6 @@ namespace Lab1.Presentation.Models
         PatientMenu,
         [PageType(typeof(AppointmentPage))]
         Appointment,
-        [PageType(typeof(DoctorMenuPage))]
-        DoctorMenu,
-        [PageType(typeof(PatientReviewPage))]
-        PatientReview,        
-        [PageType(typeof(PatientsShedulePage))]
-        Calendar,
         [PageType(typeof(MainPage))]
         Main,
         [PageType(typeof(DoctorsSchedulePage))]

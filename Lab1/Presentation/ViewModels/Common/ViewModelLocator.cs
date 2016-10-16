@@ -17,12 +17,6 @@ namespace Lab1.Presentation.ViewModels.Common
 
         public AppointmentViewModel Appointment => GetViewModel<AppointmentViewModel>();
 
-        public DoctorMenuViewModel DoctorMenu => GetViewModel<DoctorMenuViewModel>();
-
-        public PatientReviewViewModel PatientReview => GetViewModel<PatientReviewViewModel>();
-
-        public CalendarViewModel Calendar => GetViewModel<CalendarViewModel>();
-
         public MainViewModel Main => GetViewModel<MainViewModel>();
 
         public DoctorsScheduleViewModel DoctorsSchedule => GetViewModel<DoctorsScheduleViewModel>();

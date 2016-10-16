@@ -11,9 +11,9 @@
 
     <Grid Background="Orange">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="4*" MinWidth="400"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" MinWidth="400"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -46,41 +46,85 @@
             </CommandBar.SecondaryCommands>
         </CommandBar>
         
-        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"                    
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"                    
                     VerticalAlignment="Stretch">
             <TextBlock HorizontalAlignment="Center"
-                           Text="Hello, Patient"
-                           FontSize="30"
+                           Text="Strong Dent"
+                           FontSize="35"
+                       Margin="5, 0, 5, 10"
+                           Foreground="#FF0B1A68"
+                           FontStyle="Italic" FontFamily="Showcard Gothic"/>
+            <TextBlock HorizontalAlignment="Center"
+                           Text="Main Menu"
+                           FontSize="36"
                            FontWeight="Bold"
-                       Margin="5, 50, 5, 50"
+                       Margin="5, 20, 5, 50"
                            Foreground="#FF0B1A68"
                            FontStyle="Italic"/>
-            <Button x:Name="ReceptionBtn"
-                    Content="Dentist reception"
-                    Margin="5, 15 5, 5"
-                    FontSize="30"
-                    Background="DodgerBlue"
-                    Foreground="White"                    
-                    HorizontalAlignment="Stretch" 
-                    Height="70"
-                    Command="{Binding ReceptionCommand}"/>
-            <Button x:Name="DentistSсheduleBtn"
-                    Content="Dentist Sсhedule"
-                    Margin="5, 15, 5, 5"
-                    FontSize="30"
-                    Background="DodgerBlue"
-                    Foreground="White"                    
-                    HorizontalAlignment="Stretch"
-                    Command="{Binding GoDoctorSchedule}"
-                    Height="70"/>
-            <Button x:Name="OfferBtn"
-                    Content="Special offers"
-                    Margin="5, 15 5, 5"
-                    FontSize="30"
-                    Background="DodgerBlue"
-                    Foreground="White"                    
-                    HorizontalAlignment="Stretch" 
-                    Height="70"/>         
+            <StackPanel HorizontalAlignment="Center">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Image Source="ms-appx:///Assets/Images/reception1.png" 
+                           Grid.Column="0" Grid.Row="0"
+                           MaxHeight="80"
+                           Margin="10"
+                           Stretch="Uniform"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Stretch"/>
+                    <Button x:Name="ReceptionBtn"
+                            Grid.Column="1" Grid.Row="0"
+                            Content="Dentist reception"
+                            Margin="5, 15 5, 5"
+                            FontSize="30"
+                            Background="DodgerBlue"
+                            Foreground="White"                    
+                            HorizontalAlignment="Stretch"
+                            Height="80"
+                            Command="{Binding ReceptionCommand}"/>
+                    <Image Source="ms-appx:///Assets/Images/schedule.png" 
+                           Margin="10"
+                           MaxHeight="80"
+                           Grid.Column="0" Grid.Row="1"
+                           Stretch="Uniform"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+                    <Button x:Name="DentistSсheduleBtn"
+                            Grid.Column="1" Grid.Row="1"
+                        Content="Dentist Sсhedule"
+                        Margin="5, 15, 5, 5"
+                        FontSize="30"
+                        Background="DodgerBlue"
+                        Foreground="White"                    
+                        HorizontalAlignment="Stretch"
+                        Command="{Binding GoDoctorSchedule}"
+                         Height="80"/>
+                    <Image Source="ms-appx:///Assets/Images/special-offer.png" 
+                           Margin="10"
+                           MaxHeight="80"
+                           Grid.Column="0" Grid.Row="2"
+                           Stretch="Uniform"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Stretch"/>
+                    <Button x:Name="OfferBtn"
+                            Grid.Column="1" Grid.Row="2"
+                        Content="Special offers"
+                        Margin="5, 15 5, 5"
+                        FontSize="30"
+                        Background="DodgerBlue"
+                        Foreground="White"                    
+                        HorizontalAlignment="Stretch" 
+                        Height="80"/>
+                </Grid>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
