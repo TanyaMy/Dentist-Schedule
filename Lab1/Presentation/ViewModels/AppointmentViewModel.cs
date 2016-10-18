@@ -21,6 +21,9 @@ namespace Lab1.Presentation.ViewModels
         private string _complaints;
         private string _chooseBtnContent;
 
+        private bool _isErrorMessageVisible;
+        private string _errorMessage;
+
         public AppointmentViewModel(IAuthenticationManager authenticationManager)
         {
             _authenticationManager = authenticationManager;
@@ -89,18 +92,30 @@ namespace Lab1.Presentation.ViewModels
         {
             get { return _complaints; }
             set { Set(() => Complaints, ref _complaints, value); }
-        }       
+        }
+
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            set { Set(() => ErrorMessage, ref _errorMessage, value); }
+        }
+
+        public bool ErrorMessageVisibility
+        {
+            get { return _isErrorMessageVisible; }
+            set { Set(() => ErrorMessageVisibility, ref _isErrorMessageVisible, value); }
+        }
 
         private void Submit()
         {
+            HideErrorMessage();
             try
             {
                 CheckFields();
             }
             catch (Exception ex)
             {
-                //TODO: Implement red light on error
-                DialogService.ShowMessage(ex.Message, "Error");
+                HandleError(ex);
                 return;
             }
 
@@ -117,13 +132,25 @@ namespace Lab1.Presentation.ViewModels
             DialogService.ShowMessage(confirm, "Appointment");
         }
 
+        private void HideErrorMessage()
+        {
+            ErrorMessageVisibility = false;
+
+            ErrorMessage = string.Empty;
+        }
+
+        private void HandleError(Exception ex)
+        {
+            ErrorMessage = ex.Message;
+
+            ErrorMessageVisibility = true;
+        }
+
         private void CheckFields()
         {
-            if ((string.IsNullOrEmpty(_complaints))
-                   || (!_purposeList.Contains(_purpose))
-                   || (!_doctorList.Contains(_doctor)))
+            if ((string.IsNullOrEmpty(_complaints)))                 
             {
-                throw new Exception("You have to fill required fields!");
+                throw new Exception("Please, fill Complaints field");
             }
         }
        

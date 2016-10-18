@@ -160,7 +160,7 @@ namespace Lab1.Presentation.ViewModels
             }
             else if (string.IsNullOrEmpty(_password))
             {
-                throw new Exception("You didn't entered password!");
+                throw new Exception("You haven't entered password!");
             }
             else if (_password.Length < 6)
             {
