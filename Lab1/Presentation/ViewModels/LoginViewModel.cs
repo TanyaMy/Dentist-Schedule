@@ -22,6 +22,9 @@ namespace Lab1.Presentation.ViewModels
         private string _email;
         private string _password;
 
+        private bool _isErrorMessageVisible;
+        private string _errorMessage;
+
         public LoginViewModel(IAuthenticationManager authenticationManager)
         {
             _authenticationManager = authenticationManager;
@@ -48,16 +51,29 @@ namespace Lab1.Presentation.ViewModels
             set { Set(() => Password, ref _password, value); }
         }
 
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            set { Set(() => ErrorMessage, ref _errorMessage, value); }
+        }
+
+        public bool ErrorMessageVisibility
+        {
+            get { return _isErrorMessageVisible; }
+            set { Set(() => ErrorMessageVisibility, ref _isErrorMessageVisible, value); }
+        }
+
         private void Login()
         {
+            HideErrorMessage();
+
             try
             {
                 CheckFields();
             }
             catch (Exception ex)
             {
-                //TODO: Implement red light on error
-                DialogService.ShowMessage(ex.Message, "Error");
+                HandleError(ex);
                 return;
             }
 
@@ -69,50 +85,48 @@ namespace Lab1.Presentation.ViewModels
                 {
                     message = "Hello, Patient! You are logged in!";
                     NavigationService.NavigateTo(PageKeys.PatientMenu);
-                }
-                else
-                {
-                    message = "Hello, Patient! Your password is wrong!";
-                }               
-            }
-            else
-            {
-                message = "Wrong email!";
-            }
+                }                      
+            }           
             DialogService.ShowMessage(message, "Authorization");
+        }
+
+        private void HideErrorMessage()
+        {
+            ErrorMessageVisibility = false;
+
+            ErrorMessage = string.Empty;
+        }
+
+        private void HandleError(Exception ex)
+        {
+            ErrorMessage = ex.Message;
+
+            ErrorMessageVisibility = true;
         }
 
         private void CheckFields()
         {
             if (Email.Length == 0)
             {
-                throw new Exception("You didn't entered email!");
-            }
-
-            if (Email.Length < 6)
-            {
-                throw new Exception("Your email has to contain not less than 6 symbols!");
+                throw new Exception("You haven't entered email or phone!");
             }
 
             if (Password.Length == 0)
             {
-                throw new Exception("You didn't entered password!");
+                throw new Exception("You haven't entered password!");
             }
+            if (!Email.Equals(PatientEmail, StringComparison.OrdinalIgnoreCase))
+                throw new Exception("Wrong email or phone!");
 
-            if (Password.Length < 6)
+            else if (Email.Equals(PatientEmail, StringComparison.OrdinalIgnoreCase))
             {
-                throw new Exception("Your password has to contain not less than 6 symbols!");
+                if (Password != PatientPassword)
+                {
+                    throw new Exception("Wrong password!");
+                }
             }
 
-            if (!IsValidEmail(Email))
-            {
-                throw new Exception("Your email is incorrect!");
-            }
         }
-
-        private bool IsValidEmail(string email)
-        {
-            return new EmailAddressAttribute().IsValid(email);
-        }
+        
     }
 }
