@@ -56,7 +56,7 @@
             <TextBox x:Name="nameTB"
                      IsSpellCheckEnabled="False" 
                      Text="{Binding Name, Mode=TwoWay}"
-                     Background="White"
+                     Background="{Binding NameBackground}"
                      FontSize="14"
                      Margin="4, 0, 4, 0"/>
             <TextBlock  Text="*Surname"
@@ -66,7 +66,7 @@
             <TextBox x:Name="surnameTB"
                      IsSpellCheckEnabled="False" 
                      Text="{Binding Surname, Mode=TwoWay}"
-                     Background="White"
+                     Background="{Binding SurnameBackground}"
                      FontSize="14"
                      Margin="4, 0, 4, 0"/>
             <TextBlock  Text="*Phone"
@@ -76,7 +76,7 @@
             <TextBox x:Name="phoneTB"
                      IsSpellCheckEnabled="False" 
                      Text="{Binding Phone, Mode=TwoWay}"
-                     Background="White"
+                     Background="{Binding PhoneBackground}"
                      FontSize="14"
                      Margin="4, 0, 4, 0"/>
             <TextBlock  Text="*Address"
@@ -86,7 +86,7 @@
             <TextBox x:Name="addressTB"
                      IsSpellCheckEnabled="False" 
                      Text="{Binding Address, Mode=TwoWay}"
-                     Background="White"
+                     Background="{Binding AddressBackground}"
                      FontSize="14"
                      Margin="4, 0, 4, 0"/>
             <TextBlock Text="Birth date" FontSize="14"
@@ -105,19 +105,19 @@
                      IsSpellCheckEnabled="False" 
                      PlaceholderText="Phone/E-mail (not less than 6 symbols)"
                      Text="{Binding Login, Mode=TwoWay}"
-                     Background="White"
+                     Background="{Binding LoginBackground}"
                      FontSize="14"
                      Margin="4"/>
             <PasswordBox x:Name="PasswordBox"
                 Password="{Binding Password, Mode=TwoWay}"
                 PlaceholderText="Password (not less than 6 symbols)"
-                     Background="White"
+                     Background="{Binding PasswordBackground}"
                      FontSize="14"
                      Margin="4"/>
             <PasswordBox x:Name="ConfirmPasswordBox"
                 Password="{Binding ConfirmPassword, Mode=TwoWay}"
                 PlaceholderText="Confirm password"
-                     Background="White"
+                     Background="{Binding ConfirmPasswordBackground}"
                      FontSize="14"
                      Margin="4"/>
 
